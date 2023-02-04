@@ -5,36 +5,37 @@
 Checkout [Live Preview](https://sammaji.pages.dev)
 
 ## Preview
-![Home Component](./prototype_and_preview/preview/PreviewHome.png)
-![Repositories Component](./prototype_and_preview/preview/PreviewRepo.png)
 
-
+![Home Component](https://user-images.githubusercontent.com/116789799/216755870-08b70d8a-4d09-46c9-b64a-57347621dd85.png)
+![Repositories Component](https://user-images.githubusercontent.com/116789799/216760692-d46e4db1-3d73-4e39-808a-29ff91e36fbe.png)
 
 ## Getting Started
 
-First clone this project. You can also fork this project and then clone.
+First clone this project. You can also fork this project and then clone the fork. Then install all required packages. Make sure you have node and installed. If not check out [how to install node js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [how to install yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 
-```
+```gitattributes
+# cloning the project
 git clone "https://github.com/samyabrata-maji/sammaji.github.io.git"
+
+# install Yarn (if you have Yarn 
+# already installed, ignore this step)
+npm install --global yarn
+
+# installing packages
+cd <PROJECT_NAME>
+yarn install
 ```
 
-Make sure you have node installed. If not check out [how to install node js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-
-Now install all required node modules by running the following command:
-
-```
-npm install
-```
 To start the application in **development mode**, run:
-```
-npm start
-OR
-npm run start
+
+```gitattributes
+yarn dev
 ```
 
 To create a **production build**, run:
-```
-npm run build
+
+```gitattributes
+yarn build
 serve -s build
 ```
 
