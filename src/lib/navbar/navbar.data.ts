@@ -20,8 +20,8 @@ export const PROPS_NAVBAR: NavbarProps[] = [
     ],
   },
   {
-    link: "#",
-    label: "https://sammaji.hashnode.dev",
+    link: "https://sammaji.hashnode.dev",
+    label: "Blogs",
   },
   {
     link: "https://links.sammaji.pages.dev",
