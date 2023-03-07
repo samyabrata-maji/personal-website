@@ -1,9 +1,10 @@
-import './App.css'
+import { Navbar } from "./lib/navbar/navbar";
+import { PROPS_NAVBAR } from "./lib/navbar/navbar.data";
 
 function App() {
   return (
     <>
-    <h2>Hello world</h2>
+      <Navbar links={PROPS_NAVBAR} />
     </>
   );
 }
