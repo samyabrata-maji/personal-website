@@ -10,6 +10,10 @@
     "deploy:gh": "yarn build && gh-pages -d build"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@mantine/core": "^6.0.0",
+    "@mantine/hooks": "^6.0.0",
+    "@tabler/icons-react": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"
