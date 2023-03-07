@@ -1,7 +1,7 @@
 import { Card, Image, Text } from "@mantine/core";
-import { BlogData } from "./blog.types";
+import { BlogProps } from "./blog.types";
 
-export default function BlogCard({ data }: { data: BlogData }) {
+export default function BlogCard({ data }: { data: BlogProps }) {
   return (
     <Card shadow="sm" p="xl">
       <Card.Section>
