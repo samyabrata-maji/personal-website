@@ -22,8 +22,7 @@ export default function BlogSection() {
           cols={4}
           spacing="xl"
           mt={50}
-          ml={50}
-          mr={50}
+          mx={"2.5%"}
           breakpoints={[{ maxWidth: "md", cols: 1 }]}
         >
           {blogs.map((data: BlogProps, index) => {

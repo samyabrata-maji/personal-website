@@ -30,7 +30,6 @@ const useStyles = createStyles((theme) => ({
 
   logo: {
     maxWidth: 200,
-
     [theme.fn.smallerThan("sm")]: {
       display: "flex",
       flexDirection: "column",
@@ -141,7 +140,7 @@ export function Footer({ data }: { data: FooterProps[] }) {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <Container className={classes.inner} pt={"2.5%"}>
         <div className={classes.logo}>
           <Title>Sam Maji</Title>
           {/* <MantineLogo size={30} /> */}

@@ -63,7 +63,6 @@ export function Navbar({ links }: { links: NavbarProps[] }) {
   const { classes } = useStyles();
 
   const items = links.map((link) => {
-    console.log(link);
     const menuItems = link.links?.map((item) => (
       <Menu.Item
         key={item.link}

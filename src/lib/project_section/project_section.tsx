@@ -5,7 +5,7 @@ import ProjectCard from "./project_card";
 
 export default function ProjectSection() {
   return (
-    <Box mb={"2.5%"}>
+    <Box m={"2.5%"} mt={"8%"}>
       <Heading>Projects</Heading>
       <Flex align={"center"} justify={"center"}>
       <SimpleGrid cols={3}>

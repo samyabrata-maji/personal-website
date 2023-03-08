@@ -3,7 +3,7 @@ import { BlogProps } from "./blog.types";
 
 export default function BlogCard({ data }: { data: BlogProps }) {
   return (
-    <Card shadow="sm" p="xl">
+    <Card shadow="sm">
       <Card.Section>
         <Image src={data.coverImage} height={140} alt="No way!" />
       </Card.Section>

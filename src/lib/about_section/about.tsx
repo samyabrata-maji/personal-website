@@ -1,4 +1,4 @@
-import { Container, Grid, Text, Image, Title } from "@mantine/core";
+import { Container, Grid, Text, Image, Title, Center } from "@mantine/core";
 import { ContactModalButton } from "../modal/contact_modal_button";
 
 export default function About() {
@@ -21,8 +21,9 @@ export default function About() {
             height={200}
             width={200}
             radius="sm"
+            alt="Profile picture of Samybrata Maji"
             src="https://avatars.githubusercontent.com/u/116789799?s=400&u=88ebae0d9706cc7576ce71128ff4c740fa4bacdc&v=4"
-          ></Image>
+          />
         </Grid.Col>
       </Grid>
     </Container>
