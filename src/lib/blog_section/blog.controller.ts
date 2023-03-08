@@ -24,6 +24,17 @@ export const getBlogs = async () => {
       if (req.ok) return req.json();
     })
     .then((data) => {
-      return data.data.user.publication.posts.slice(0, 4);
+      return data.data.user.publication.posts
+        .slice(0, 4)
+        .map(
+          (post: {
+            contentMarkdown: string;
+            coverImage: string;
+            title: string;
+          }) => {
+            post.coverImage = `${post.coverImage}?fit=crop&crop=entropy&auto=compress,format&format=webp`;
+            return post;
+          }
+        );
     });
 };

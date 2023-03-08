@@ -9,7 +9,10 @@ export default function BlogSection() {
   const [blogs, setBlogs] = useState(() => []);
 
   useEffect(() => {
+
     getBlogs().then((data) => {
+    console.log(data[0].coverImage);
+      
       setBlogs(data);
     });
   }, []);
