@@ -1,4 +1,4 @@
-import { Container, Grid, Text, Image, Title, Center } from "@mantine/core";
+import { Container, Grid, Text, Image, Title } from "@mantine/core";
 import { ContactModalButton } from "../modal/contact_modal_button";
 
 export default function About() {
@@ -8,10 +8,10 @@ export default function About() {
         <Grid.Col span="auto" mr={"5%"}>
           <Title order={1}>Samyabrata Maji</Title>
           <Text mt="xs" mb="xl" color="dimmed" size="sm" lineClamp={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Hi there! My name is Samyabrata Maji and I am a web developer,
+            technical blogger, UI/UX designer, and student of computer science.
+            In my free time, I enjoy exploring new technologies and working on
+            personal projects.
           </Text>
           <ContactModalButton>Say Hello</ContactModalButton>
         </Grid.Col>

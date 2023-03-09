@@ -11,6 +11,7 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 import { NavbarProps } from "./navbar.types";
+import { ThemeToggleButton } from "../theme_toggle/theme_toggle_button";
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -103,6 +104,7 @@ export function Navbar({ links }: { links: NavbarProps[] }) {
     <Header height={56}>
       <Container>
         <div className={classes.inner}>
+          <h1></h1>
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
@@ -112,6 +114,7 @@ export function Navbar({ links }: { links: NavbarProps[] }) {
             className={classes.burger}
             size="sm"
           />
+          <ThemeToggleButton />
         </div>
       </Container>
     </Header>

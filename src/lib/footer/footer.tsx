@@ -11,6 +11,7 @@ import {
   IconBrandTwitter,
   IconBrandYoutube,
   IconBrandInstagram,
+  IconBrandLinkedin,
 } from "@tabler/icons-react";
 import { FooterProps } from "./footer.types";
 
@@ -156,14 +157,25 @@ export function Footer({ data }: { data: FooterProps[] }) {
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
+          <ActionIcon
+            size="lg"
+            onClick={() => window.open("https://twitter.com/sammaji15")}
+          >
             <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
+            <IconBrandLinkedin
+              size={18}
+              stroke={1.5}
+              onClick={() => window.open("https://linkedin.com/in/samyabrata-maji")}
+            />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
+            <IconBrandInstagram
+              size={18}
+              stroke={1.5}
+              onClick={() => window.open("https://instagram.com/sammaji15")}
+            />
           </ActionIcon>
         </Group>
       </Container>

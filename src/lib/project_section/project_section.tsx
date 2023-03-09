@@ -8,7 +8,7 @@ export default function ProjectSection() {
     <Box m={"2.5%"} mt={"8%"}>
       <Heading>Projects</Heading>
       <Flex align={"center"} justify={"center"}>
-      <SimpleGrid cols={3}>
+      <SimpleGrid cols={3} breakpoints={[{maxWidth: "sm", cols: 1}]}>
         {PROJECT_DATA.map((project_data, index) => {
           return <ProjectCard key={index} data={project_data} />;
         })}
