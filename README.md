@@ -1,11 +1,5 @@
 # Personal Website
 
-**Working on a new UI**
-
-Checkout [Live Preview](https://sammaji.pages.dev)
-
-## Preview
-
 ![Home Component](https://user-images.githubusercontent.com/116789799/224027525-4170bf8a-377d-4493-9c29-9c551589e73f.png)
 
 ## Getting Started
