@@ -1,13 +1,6 @@
 # Personal Website
 
-**Working on a new UI**
-
-Checkout [Live Preview](https://sammaji.pages.dev)
-
-## Preview
-
-![Home Component](https://user-images.githubusercontent.com/116789799/216755870-08b70d8a-4d09-46c9-b64a-57347621dd85.png)
-![Repositories Component](https://user-images.githubusercontent.com/116789799/216760692-d46e4db1-3d73-4e39-808a-29ff91e36fbe.png)
+![Home Component](https://user-images.githubusercontent.com/116789799/224027525-4170bf8a-377d-4493-9c29-9c551589e73f.png)
 
 ## Getting Started
 
@@ -36,7 +29,7 @@ To create a **production build**, run:
 
 ```gitattributes
 yarn build
-serve -s build
+yarn preview
 ```
 
 ## Customize Website
