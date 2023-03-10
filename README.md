@@ -29,7 +29,7 @@ To create a **production build**, run:
 
 ```gitattributes
 yarn build
-yarn preview
+serve -s build
 ```
 
 ## Customize Website
