@@ -28,7 +28,7 @@ yarn dev
 To create a **production build**, run:
 
 ```gitattributes
-yarn buildimprove installation guide
-serve -s build
+yarn build
+yarn preview
 ```
 
