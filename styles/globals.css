@@ -2,6 +2,253 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --wd-main: 340px;
+}
+
 * {
-    color: white;
+  color: white;
+}
+
+.link-button {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  word-spacing: 2em;
+}
+
+.link-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.link-button:hover > * {
+  color: #000;
+  transition-delay: 0.5s;
+}
+
+.link-button:hover::before {
+  width: 100%;
+}
+
+.link-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.link-button:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+.main_back {
+  position: absolute;
+  border-radius: 10px;
+  transform: rotate(90deg);
+  width: 11em;
+  height: 11em;
+  z-index: -2;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--wd-main);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  gap: 8px;
+}
+
+.main-card {
+  height: 96px;
+  transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main:hover .main-card {
+  height: 340px;
+}
+
+.card {
+  width: 96px;
+  height: 96px;
+  /* border-top-left-radius: 10px; */
+  /* background: lightgrey; */
+  transition: 0.4s ease-in-out, 0.2s background-color ease-in-out,
+    0.2s background-image ease-in-out;
+  /* background: rgba(255, 255, 255, 0.596); */
+  /* backdrop-filter: blur(5px); */
+  /* border: 1px solid transparent; */
+  /* -webkit-backdrop-filter: blur(5px); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .icon {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.card .instagram {
+  fill: #cc39a4;
+}
+
+.card .twitter {
+  fill: #03a9f4;
+}
+
+.card .dribble {
+  fill: #ffb5d2;
+}
+
+.card .codepen {
+  fill: black;
+}
+
+.card .discord {
+  fill: #8c9eff;
+}
+
+.card .github {
+  fill: black;
+}
+
+.card .telegram {
+  fill: #29b6f6;
+}
+
+.main:hover {
+  width: var(--wd-main);
+  cursor: pointer;
+}
+
+.main:hover .main_back {
+  opacity: 0;
+}
+
+.main:hover .card {
+  margin: 0.2em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main:hover .text {
+  opacity: 0;
+  z-index: -3;
+}
+
+.main:hover .icon {
+  opacity: 1;
+}
+
+.card:nth-child(1):hover {
+  background-color: #cc39a4;
+}
+
+.card:nth-child(1):hover .instagram {
+  fill: white;
+}
+
+.card:nth-child(2):hover {
+  background-color: #03a9f4;
+}
+
+.card:nth-child(2):hover .twitter {
+  fill: white;
+}
+
+.card:nth-child(3):hover {
+  background-color: #ffb5d2;
+}
+
+.card:nth-child(3):hover .dribble {
+  fill: white;
+}
+
+.card:nth-child(4):hover {
+  background-color: #1e1f26;
+}
+
+.card:nth-child(4):hover .codepen {
+  fill: white;
+}
+
+.card:nth-child(5):hover {
+  background-color: #03a9f4;
+}
+
+.card:nth-child(5):hover .twitter {
+  fill: white;
+}
+
+.card:nth-child(6):hover {
+  background-color: #8c9eff;
+}
+
+.card:nth-child(6):hover .discord {
+  fill: white;
+}
+
+.card:nth-child(7):hover {
+  background-color: black;
+}
+
+.card:nth-child(7):hover .github {
+  fill: white;
+}
+
+.card:nth-child(8):hover {
+  background-color: #29b6f6;
+}
+
+.card:nth-child(8):hover .telegram {
+  fill: white;
+}
+
+/* REQUIRED: for the hover effect on telegram icon to work properly   */
+.card:nth-child(8):hover .telegram > path:nth-of-type(2) {
+  fill: #29b6f6;
+}
+
+.card:nth-child(8):hover .telegram > path:nth-of-type(3) {
+  fill: #29b6f6;
+}
+
+.card:nth-child(9):hover {
+  background-color: #ff4500;
+}
+
+.card:nth-child(9) .reddit > g circle {
+  fill: #ff4500;
+}
+
+.card:nth-child(9) .reddit > g path {
+  fill: white;
+}
+
+.text {
+  transition: 0.4s ease-in-out;
+  color: black;
+  /* text-align: center; */
+  z-index: 3;
 }
