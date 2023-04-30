@@ -21,7 +21,7 @@
       "@/lib/*": ["lib/*"],
       "@/styles/*": ["styles/*"],
       "@/types/*": ["types/*"],
-      
+      "@/assets/*": ["assets/*"]
     },
     "plugins": [
       {
