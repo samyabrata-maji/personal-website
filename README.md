@@ -10,7 +10,7 @@ First clone this project. You can also fork this project and then clone the fork
 # cloning the project
 git clone "https://github.com/samyabrata-maji/sammaji.github.io.git"
 
-# install Yarn (if you have Yarn 
+# install Yarn (if you have Yarn
 # already installed, ignore this step)
 npm install --global yarn
 
@@ -31,4 +31,3 @@ To create a **production build**, run:
 yarn build
 yarn preview
 ```
-

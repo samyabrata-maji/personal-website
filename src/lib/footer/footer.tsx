@@ -167,7 +167,9 @@ export function Footer({ data }: { data: FooterProps[] }) {
             <IconBrandLinkedin
               size={18}
               stroke={1.5}
-              onClick={() => window.open("https://linkedin.com/in/samyabrata-maji")}
+              onClick={() =>
+                window.open("https://linkedin.com/in/samyabrata-maji")
+              }
             />
           </ActionIcon>
           <ActionIcon size="lg">

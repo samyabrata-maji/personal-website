@@ -6,23 +6,28 @@ export default function About() {
     <Container size={"xl"} pl={"20%"} pr={"20%"} mt={"10%"} mb={"10%"}>
       <Grid>
         <Grid.Col span="auto" mr={"5%"} mb={"2rem"}>
-          <Flex 
-            align="center"
-            direction="column"
-          >
-            <Title ta="center" order={1}>Samyabrata Maji</Title>
-            <Text ta="justify" mt="xs" mb="xl" color="dimmed" size="sm" lineClamp={4}>
+          <Flex align="center" direction="column">
+            <Title ta="center" order={1}>
+              Samyabrata Maji
+            </Title>
+            <Text
+              ta="justify"
+              mt="xs"
+              mb="xl"
+              color="dimmed"
+              size="sm"
+              lineClamp={4}
+            >
               Hi there! My name is Samyabrata Maji and I am a web developer,
-              technical blogger, UI/UX designer, and student of computer science.
-              In my free time, I enjoy exploring new technologies and working on
-              personal projects.
+              technical blogger, UI/UX designer, and student of computer
+              science. In my free time, I enjoy exploring new technologies and
+              working on personal projects.
             </Text>
             <ContactModalButton>Say Hello</ContactModalButton>
           </Flex>
         </Grid.Col>
 
         <Grid.Col span="content" ml={"5%"} mx="auto">
-          
           <Image
             height={200}
             width={200}

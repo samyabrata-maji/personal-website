@@ -34,7 +34,10 @@ export default function BlogSection() {
           spacing="xl"
           mt={50}
           mx={"2.5%"}
-          breakpoints={[{ maxWidth: "md", cols: 2 }, {maxWidth: "sm", cols: 1}]}
+          breakpoints={[
+            { maxWidth: "md", cols: 2 },
+            { maxWidth: "sm", cols: 1 },
+          ]}
         >
           {blogs.map((data: BlogProps, index) => {
             return <BlogCard key={index} data={data} />;

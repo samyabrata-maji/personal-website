@@ -2,7 +2,7 @@ import LinkButton from '@/ui/LinkButton';
 
 export default function Page() {
   return (
-    <div className='py-10'>
+    <div className="py-10">
       <h1 className="flex select-none items-center justify-center py-4 text-3xl font-black leading-relaxed text-white">
         My Socials ✨
       </h1>
