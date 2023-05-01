@@ -28,7 +28,7 @@ const DATA_NAVBAR: NavbarItemProps[] = [
     {
         slug: "Socials",
         nested: false,
-        link: "/socials",
+        link: "/links",
     },
 ];
 

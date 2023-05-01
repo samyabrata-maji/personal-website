@@ -6,9 +6,9 @@ import React from "react";
 export default function LinksPage() {
   return (
     <>
-      <div className="py-10 block sm:hidden">
+      <div className="hidden py-10 max-sm:block">
         <h1 className="flex select-none items-center justify-center py-4 text-3xl font-black leading-relaxed text-white">
-          My Socials ✨
+          My Socials
         </h1>
         <div className="flex flex-col content-center items-center gap-6 px-6 py-4">
           <LinkButton>Github</LinkButton>
@@ -18,7 +18,7 @@ export default function LinksPage() {
         </div>
       </div>
 
-      <div className="hidden h-[100vh] items-center justify-center sm:flex">
+      <div className="flex h-[100vh] items-center justify-center max-sm:hidden">
         <LinkGrid />
       </div>
     </>
