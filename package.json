@@ -14,9 +14,11 @@
     "deploy:gh": "tsc && vite build && gh-pages -d build"
   },
   "dependencies": {
+    "@apollo/client": "3.7.13",
     "@emailjs/browser": "^3.10.0",
     "@tabler/icons-react": "^2.8.0",
     "clsx": "1.2.1",
+    "graphql": "16.6.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
