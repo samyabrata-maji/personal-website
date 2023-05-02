@@ -1,14 +1,18 @@
-import { type } from "os";
+import { ReactNode } from "react";
 
-type ComponentProps = { className: string };
+type ComponentProps = {
+    children?: ReactNode;
+    className?: string
+};
 
-// type NavbarItemProps = {
-//     slug: string;
-//     link?: string;
-//     links?: { slug: string; link: string }[];
-// };
+type CardPrpos = ComponentProps & {
+    title: string;
+    imgHref: string
+}
 
-type NavbarItemProps = { slug: string } &
+type CardContainerProps = ComponentProps & {
+    title: string;
+}
+
+type NavbarItemProps = ComponentProps & { slug: string } &
     ({ nested: false; link: string } | { nested: true, links: { slug: string, link: string }[] });
-
-// type my = Omit<NavbarItemProps, "nested">
