@@ -11,7 +11,7 @@ export default function RootLayout({
       <head>
         <title>Portfolio of Samyabrata Maji</title>
       </head>
-      <body className="overflow-y-scroll bg-black">{children}</body>
+      <body className="bg-zinc-950">{children}</body>
     </html>
   );
 }
