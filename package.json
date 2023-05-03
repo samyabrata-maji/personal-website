@@ -3,13 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "dev:next": "next dev --turbo",
-    "build:next": "next build",
-    "start:next": "next start",
-    "lint:next": "next lint",
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "format": "prettier --write \"**/*.{js,ts,tsx,md}\"",
     "deploy:gh": "tsc && vite build && gh-pages -d build"
   },
