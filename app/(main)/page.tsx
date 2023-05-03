@@ -1,6 +1,7 @@
-import Card, { CardBlogContainer, CardContainer } from "@/ui/Card";
+import BlogCard, { CardBlogContainer, CardContainer, ProjectCard } from "@/ui/Card";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import React from "react";
+import MainLoading from "./loading";
 
 async function fetchData(): Promise<any> {
   const client = new ApolloClient({
@@ -37,9 +38,9 @@ export default async function MainPage() {
           .slice(0, 4)
           .map((item: any, index: any) => {
             return (
-              <Card key={index} title={item.title} imgHref={item.coverImage}>
+              <BlogCard key={index} title={item.title} imgHref={item.coverImage}>
                 {item.brief}
-              </Card>
+              </BlogCard>
             );
           })}
       </CardContainer>
@@ -47,7 +48,7 @@ export default async function MainPage() {
       <CardBlogContainer title="Projects" className="py-[2rem]">
         {[1, 2, 3, 4].map((item: any, index: any) => {
           return (
-            <Card
+            <ProjectCard
               key={index}
               title={"Lorem ipsum dolor sit amet"}
               imgHref={item.coverImage}
@@ -56,7 +57,7 @@ export default async function MainPage() {
               nulla saepe facilis nemo rem ipsam consequuntur dicta facere nobis
               mollitia reiciendis accusamus aliquam iure, doloremque nam
               corrupti aspernatur enim illum.
-            </Card>
+            </ProjectCard>
           );
         })}
       </CardBlogContainer>
