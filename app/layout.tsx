@@ -11,7 +11,7 @@ export default function RootLayout({
       <head>
         <title>Portfolio of Samyabrata Maji</title>
       </head>
-      <body className="bg-zinc-950">{children}</body>
+      <body className="bg-dark-rich-black overflow-x-hidden overflow-y-auto">{children}</body>
     </html>
   );
 }

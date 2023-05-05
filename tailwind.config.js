@@ -7,14 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // https://vercel.com/design/color
+      gridTemplateRows: {
+        "main-layout": "56px 1fr",
+      },
+      gridTemplateColumns: {
+        "hero-layout": "1.75fr 1fr",
+      },
       colors: {
-        vercel: {
-          pink: "#FF0080",
-          blue: "#0070F3",
-          cyan: "#50E3C2",
-          orange: "#F5A623",
-          violet: "#7928CA",
+        dark: {
+          "rich-black": "#020202",
+          "eerie-black": "#181818",
+          "dandelion": "#F6E71D",
+          "metallic-yellow": "#F5D10D"
         },
       },
       keyframes: ({ theme }) => ({

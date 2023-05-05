@@ -55,7 +55,7 @@ export function CardContainer({
 }: CardContainerProps) {
   return (
     <div className={`${className}`}>
-      <h1 className="px-6 text-4xl font-black">{title}</h1>
+      <h1 className="px-6 text-4xl text-black font-black">{title}</h1>
       <div
         className={`card-container grid w-[100%] grid-cols-4 gap-4 px-6 py-6 max-md:grid-cols-3 max-sm:grid-cols-1`}
       >

@@ -203,3 +203,20 @@
   /* text-align: center; */
   z-index: 3;
 }
+
+/* SCROLLBARS */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555555;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #555555;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 2px solid #555555;
+}
