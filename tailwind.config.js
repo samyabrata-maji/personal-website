@@ -12,7 +12,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "hero-layout": "1.75fr 1fr",
-        "newsletter-layout": "1fr 1.75fr",
+        "newsletter-layout": "1fr 1.5fr",
       },
       colors: {
         dark: {

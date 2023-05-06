@@ -2,10 +2,9 @@ import React from "react";
 import ProfilePic from "@/assets/images/pfp.png";
 
 export default async function MainPage() {
-
   return (
     <>
-      <div className="grid min-h-[100vh] grid-cols-hero-layout gap-16 px-16 py-16">
+      <div className="grid min-h-[100vh] grid-cols-hero-layout gap-16 px-16 py-16 max-sm:grid-cols-1">
         <div className="flex h-[100%] flex-col items-start justify-center gap-8">
           <h1 className="text-6xl leading-[1.2]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -20,7 +19,7 @@ export default async function MainPage() {
             Work With Me
           </button>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center max-sm:hidden">
           <img src={ProfilePic.src} />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import DATA_NAVBAR from "data/navbar.data";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
+import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -67,17 +68,20 @@ export function NestedNavbarItem({
 
 export function NavbarTemplate() {
   return (
-    <div className="fixed flex h-[56px] w-[100%] bg-black items-center justify-around">
-      <div>
+    <div className="fixed flex h-[56px] w-[100%] items-center justify-around bg-black">
+      <div className="max-sm:hidden">
         <h1 className="text-md text-white">Portfolio</h1>
       </div>
-      <div className="flex items-center justify-center gap-4">
+      <div className="navbar-sm">
+        <FaBars color="#fff" />
+      </div>
+      <div className="flex items-center justify-center gap-4 max-sm:hidden">
         <NavbarItem link="#">Home</NavbarItem>
         <NavbarItem link="#">Services</NavbarItem>
         <NavbarItem link="#">Blog</NavbarItem>
         <NavbarItem link="#">Contact</NavbarItem>
       </div>
-      <div>
+      <div className="max-sm:hidden">
         <Link href="/newsletter">
           <button>Newsletter</button>
         </Link>
