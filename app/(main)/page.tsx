@@ -1,40 +1,7 @@
-import BlogCard, {
-  CardBlogContainer,
-  CardContainer,
-  ProjectCard,
-} from "@/ui/Card";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import React from "react";
 import ProfilePic from "@/assets/images/pfp.png";
-import LoadingMain from "./loading";
-
-async function fetchData(): Promise<any> {
-  const client = new ApolloClient({
-    uri: "https://api.hashnode.com/",
-    cache: new InMemoryCache(),
-  });
-
-  return await client.query({
-    query: gql`
-      {
-        user(username: "samyabratamaji") {
-          publication {
-            posts {
-              slug
-              title
-              popularity
-              brief
-              coverImage
-            }
-          }
-        }
-      }
-    `,
-  });
-}
 
 export default async function MainPage() {
-  const result = await fetchData();
 
   return (
     <>
