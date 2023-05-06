@@ -41,7 +41,7 @@ export function NavbarItem({
   className?: string;
 }) {
   return (
-    <Link href={link} target="_blank" className={`px-2 py-1 ${className}`}>
+    <Link href={link} target="_blank" className={`px-2 py-1 text-white ${className}`}>
       {children}
     </Link>
   );
@@ -70,19 +70,19 @@ export function NavbarTemplate() {
   return (
     <div className="fixed flex h-[56px] w-[100%] items-center justify-around bg-black">
       <div className="max-sm:hidden">
-        <h1 className="text-md text-white">Portfolio</h1>
+        <h1 className="text-md text-white"></h1>
       </div>
-      <div className="navbar-sm">
+      <div className="sm:hidden">
         <FaBars color="#fff" />
       </div>
       <div className="flex items-center justify-center gap-4 max-sm:hidden">
-        <NavbarItem link="#">Home</NavbarItem>
+        <NavbarItem link="/">Home</NavbarItem>
         <NavbarItem link="#">Services</NavbarItem>
-        <NavbarItem link="#">Blog</NavbarItem>
+        <NavbarItem link="/blog">Blog</NavbarItem>
         <NavbarItem link="#">Contact</NavbarItem>
       </div>
       <div className="max-sm:hidden">
-        <Link href="/newsletter">
+        <Link className="text-white" href="/newsletter">
           <button>Newsletter</button>
         </Link>
       </div>

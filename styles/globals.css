@@ -6,10 +6,6 @@
   --wd-main: 340px;
 }
 
-* {
-  color: white;
-}
-
 .main_back {
   position: absolute;
   border-radius: 10px;

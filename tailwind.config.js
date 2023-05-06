@@ -11,7 +11,7 @@ module.exports = {
         "main-layout": "56px 1fr",
       },
       gridTemplateColumns: {
-        "hero-layout": "1.75fr 1fr",
+        "hero-layout": "1.66fr 1fr",
         "newsletter-layout": "1fr 1.5fr",
       },
       colors: {

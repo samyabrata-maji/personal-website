@@ -1,0 +1,12 @@
+{
+    "title": "Hello, I am",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur, neque, quibusdam modi provident iure dolor doloremque mollitia porro error, at libero aspernatur voluptates corrupti repudiandae minima consequatur nisi deleniti.",
+    "cta": "Work With Me",
+    "service_one": {
+        "title": "Lorem ipsum dolor sit amet consectetur adipis",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima corrupti optio culpa necessitatibus aperiam voluptatum voluptate iste quaerat ipsam, numquam dolores aliquid maxime ducimus est praesentium at minus? Odio, ut!"
+    },
+    "service_two": {},
+    "service_three": {},
+    "service_four": {}
+}
