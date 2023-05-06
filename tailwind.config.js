@@ -12,13 +12,14 @@ module.exports = {
       },
       gridTemplateColumns: {
         "hero-layout": "1.75fr 1fr",
+        "newsletter-layout": "1fr 1.75fr",
       },
       colors: {
         dark: {
           "rich-black": "#020202",
           "eerie-black": "#181818",
-          "dandelion": "#F6E71D",
-          "metallic-yellow": "#F5D10D"
+          dandelion: "#F6E71D",
+          "metallic-yellow": "#F5D10D",
         },
       },
       keyframes: ({ theme }) => ({
