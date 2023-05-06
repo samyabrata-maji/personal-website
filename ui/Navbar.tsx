@@ -67,7 +67,7 @@ export function NestedNavbarItem({
 
 export function NavbarTemplate() {
   return (
-    <div className="flex h-[56px] items-center justify-around">
+    <div className="fixed flex h-[56px] w-[100%] bg-black items-center justify-around">
       <div>
         <h1 className="text-md text-white">Portfolio</h1>
       </div>

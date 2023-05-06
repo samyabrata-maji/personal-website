@@ -38,7 +38,7 @@ export default async function MainPage() {
 
   return (
     <>
-      <div className="grid min-h-[calc(100vh-56px)] grid-cols-hero-layout gap-16 px-16 py-16">
+      <div className="grid min-h-[100vh] grid-cols-hero-layout gap-16 px-16 py-16">
         <div className="flex h-[100%] flex-col items-start justify-center gap-8">
           <h1 className="text-6xl leading-[1.2]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit
