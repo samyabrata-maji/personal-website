@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "preview": "vite preview",
+    "start": "next start",
     "deploy:gh": "tsc && vite build && gh-pages -d build"
   },
   "dependencies": {
