@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { type } from "os";
 import React, {
+  AnchorHTMLAttributes,
   BlockquoteHTMLAttributes,
   DetailedHTMLProps,
   HTMLAttributes,
@@ -12,7 +13,7 @@ export type TypographyProps = DetailedHTMLProps<
 >;
 
 export type TypographyAnchorProps = DetailedHTMLProps<
-  HTMLAttributes<HTMLAnchorElement>,
+  AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 >;
 
@@ -39,7 +40,7 @@ export function TypographyH1(props: TypographyProps) {
 export function TypographyH2(props: TypographyProps) {
   const { className, children, ...rest } = props;
   return (
-    <h1
+    <h2
       className={cn(
         "mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0",
         className
@@ -47,14 +48,14 @@ export function TypographyH2(props: TypographyProps) {
       {...rest}
     >
       {children}
-    </h1>
+    </h2>
   );
 }
 
 export function TypographyH3(props: TypographyProps) {
   const { className, children, ...rest } = props;
   return (
-    <h1
+    <h3
       className={cn(
         "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
         className
@@ -62,17 +63,14 @@ export function TypographyH3(props: TypographyProps) {
       {...rest}
     >
       {children}
-    </h1>
+    </h3>
   );
 }
 
 export function TypographyP(props: TypographyProps) {
   const { className, children, ...rest } = props;
   return (
-    <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
-      {...rest}
-    >
+    <p className={cn("leading-7", className)} {...rest}>
       {children}
     </p>
   );
@@ -83,7 +81,7 @@ export function TypographyAnchor(props: TypographyAnchorProps) {
   return (
     <a
       className={cn(
-        "font-medium text-primary underline underline-offset-4",
+        "font-medium text-blue-400 hover:underline underline-offset-4",
         className
       )}
       {...rest}
