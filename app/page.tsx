@@ -1,29 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import {
-  TypographyAnchor,
-  TypographyBlockQuote,
-  TypographyH1,
-  TypographyH2,
-  TypographyH3,
-  TypographyP,
-} from "@/components/typography";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-
-import ImgPfp from "@/public/assets/img/sammaji.png";
-import ImgDigitalDreamers from "@/public/assets/img/digitaldreamers.png";
-import { Separator } from "@/components/ui/separator";
 import ProjectCardSection from "@/components/project-card-section";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
-import { SiHashnode } from "react-icons/si";
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { BiLogoDevTo } from "react-icons/bi";
-import { IconActionButton } from "@/components/icon-button";
-import social_links_data from "@/components/data/social-links-data";
 import Header from "@/components/header";
 import EducationSection from "@/components/education-section";
 

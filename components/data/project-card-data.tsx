@@ -42,8 +42,8 @@ const project_card_data: ProjectCardDataProps = {
     {
       title: "Labforall",
       src: ImgLabforall.src,
-      url: "https://makaut-photo-competition.vercel.app/",
-      github_url: "https://github.com/samyabrata-maji/photo-competition-portal",
+      url: "https://labforall.vercel.app/",
+      github_url: "https://github.com/samyabrata-maji/labforall",
       slugs: ["react", "firebase", "threejs"],
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus exercitationem illum inventore, sunt quia corrupti dolorum magnam eum ab repellendus maiores eius esse debitis totam rerum error culpa doloribus consequatur.",
