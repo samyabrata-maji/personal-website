@@ -5,7 +5,7 @@
   "scripts": {
     "dev:tr": "next dev --turbo",
     "dev:cl": "concurrently \"contentlayer dev --clearCache --verbose\" \"next dev\"",
-    "build": "next build",
+    "build": "contentlayer build --clearCache && next build",
     "start": "next start",
     "deploy:gh": "tsc && vite build && gh-pages -d build"
   },
