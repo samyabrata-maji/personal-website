@@ -3,14 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev:tr": "next dev --turbo",
+    "dev:cl": "concurrently \"contentlayer dev --clearCache --verbose\" \"next dev\"",
     "build": "next build",
     "start": "next start",
     "deploy:gh": "tsc && vite build && gh-pages -d build"
   },
+  "pnpm": {
+    "overrides": {
+      "@opentelemetry/api": "1.4.1",
+      "@opentelemetry/core": "1.13.0",
+      "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+      "@opentelemetry/resources": "1.13.0",
+      "@opentelemetry/sdk-trace-base": "1.13.0",
+      "@opentelemetry/sdk-trace-node": "1.13.0",
+      "@opentelemetry/semantic-conventions": "1.13.0"
+    }
+  },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.6",
+    "@gitgraph/react": "^1.6.0",
     "@mantine/core": "^6.0.0",
     "@mantine/hooks": "^6.0.0",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -22,10 +35,13 @@
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^2.30.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "lucide-react": "^0.260.0",
     "next": "13.4.9",
+    "next-contentlayer": "^0.3.4",
     "postcss": "8.4.25",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -34,5 +50,8 @@
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }

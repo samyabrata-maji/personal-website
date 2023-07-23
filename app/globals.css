@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

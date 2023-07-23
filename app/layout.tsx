@@ -1,9 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Syne } from 'next/font/google'
 import ImgPfp from "@/public/assets/img/sammaji.png"
 
 const inter = Inter({ subsets: ['latin'] })
+// const syne = Syne({subsets: ['greek']})
 
 const title = 'Portfolio of Samyabrata Maji'
 const description ='Personal Portfolio of Samyabrata Maji, showcasing his work.'
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: ["portfolio", "web developer", "react", "next", "frontend"],
+  alternates: {canonical: {url: "https://sammaji.pages.dev/"}},
   icons: ["https://vercel.pub/favicon.ico"],
   openGraph: {
     title,
