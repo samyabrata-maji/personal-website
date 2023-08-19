@@ -1,6 +1,6 @@
 ---
 title: Chapterize Case Study
-date: 2021-12-24
+date: 2023-08-19
 ---
 
 [Chapterize](https://chapterize.vercel.app/) is a simple NextJS website that generates youtube chapters from a youtube video. It uses OpenAI's *gpt-3.5-turbo* model to analyze the transcripts of the videos and generate chapters based on that.
@@ -11,9 +11,15 @@ date: 2021-12-24
 
 The working is pretty simple. First, it makes an api requests to an endpoint to fetch the transcript in chunks. Its then feed the chunk to open ai and receives a response. That response is then parsed into a format that YouTube recognizes as valid chapters.
 
-![Chapterize](/assets/img/chapterize.png)
+<!-- ![Chapterize](/assets/img/chapterize.png) -->
 
-## Challenges I faced while building chapterize
+<!-- ## What I learned -->
+
+### Fast API
+
+Chapterize uses the 
+
+
 
 ## Future Plans
 

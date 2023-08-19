@@ -23,7 +23,10 @@ export function IconButton(props: IconButtonProps) {
   const { title, children, className, href, ...rest } = props;
   return (
     <a href={href}>
-      <Button className={cn("px-2 py-4 w-[400px]", className)} {...rest}>
+      <Button
+        className={cn("px-2 py-4 max-w-[400px] h-12 w-[calc(100vw-4rem)]", className)}
+        {...rest}
+      >
         {children}
         <p>&ensp;{title}</p>
       </Button>

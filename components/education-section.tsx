@@ -13,7 +13,7 @@ export type EducationProps = {
 export function EducationCard(props: EducationProps) {
   const { school, degree, startDate, endDate } = props;
   return (
-    <div className="grid grid-cols-[1fr_auto] gap-8">
+    <div className="grid grid-cols-[1fr_auto] max-sm:grid-cols-1 max-sm:grid-rows-[auto_auto] gap-8 max-sm:gap-2">
       <TypographyP>
         <b>{degree}</b>
         {`, ${school}`}
@@ -25,7 +25,7 @@ export function EducationCard(props: EducationProps) {
 
 export default function EducationSection() {
   return (
-    <div className="flex flex-col gap-4 w-[100%] my-8">
+    <div className="flex flex-col gap-4 w-[100%]">
       <TypographyH2 className="border-b-0">Education 📖</TypographyH2>
       <EducationCard
         degree="B.Tech. Computer Science and Engineering"

@@ -1,5 +1,5 @@
 import ImgDigitalDreamers from "@/public/assets/img/digitaldreamers.png";
-import ImgNextStarter from "@/public/assets/img/nextstarter.png"
+import ImgNextStarter from "@/public/assets/img/nextstarter.png";
 import ImgMagnificentSeven from "@/public/assets/img/magnificentseven.png";
 import ImgChapterize from "@/public/assets/img/chapterize.png";
 import ImgPhotoCompetiton from "@/public/assets/img/photocompetition.png";
@@ -37,7 +37,8 @@ const project_card_data: ProjectCardDataProps = {
       url: "https://next-starter-sepia.vercel.app/",
       github_url: "https://github.com/samyabrata-maji/next-starter",
       slugs: ["nextjs", "contentlayer", "stripe"],
-      description: "A template to quickly generate a next 13 projects. Features: prettier, eslint, tailwindcss, user authentication, custom components like buttons, dialog, etc."
+      description:
+        "A template to quickly generate a next 13 projects. Features: prettier, eslint, tailwindcss, user authentication, custom components like buttons, dialog, etc.",
     },
     {
       title: "Magnificient Seven",

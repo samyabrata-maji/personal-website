@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import {
@@ -39,11 +41,25 @@ export function ProjectCard(props: ProjectCardProps) {
         <div className="flex items-center gap-4">
           <TypographyH3 className="mt-0">{title}</TypographyH3>
           <div className="flex flex-wrap gap-2">
-            <a href={url ? url : "#"}><Button className="h-fit px-2 py-1" disabled={!url}>{ url ? "Demo" : "Building"}</Button></a>
-            <a href={github_url ? github_url : "#"}><Button className="h-fit px-2 py-1" variant="ghost" disabled={!github_url}>{ github_url ? "Code" : "Private"}</Button></a>
+            <a href={url ? url : "#"}>
+              <Button className="h-fit px-2 py-1" disabled={!url}>
+                {url ? "Demo" : "Building"}
+              </Button>
+            </a>
+            <a href={github_url ? github_url : "#"}>
+              <Button
+                className="h-fit px-2 py-1"
+                variant="ghost"
+                disabled={!github_url}
+              >
+                {github_url ? "Code" : "Private"}
+              </Button>
+            </a>
           </div>
         </div>
-        <TypographyP className="flex-grow overflow-hidden">{description}</TypographyP>
+        <TypographyP className="flex-grow overflow-hidden">
+          {description}
+        </TypographyP>
         <div className="flex items-start justify-center gap-3">
           {slugs.map((slug, index) => {
             return (
@@ -59,22 +75,46 @@ export function ProjectCard(props: ProjectCardProps) {
 }
 
 export default function ProjectCardSection() {
-
-  const [itemsCount, setInitialCount] = useState<number>(3)
+  const [itemsCount, setInitialCount] = useState<number>(3);
 
   return (
-    <div className="flex flex-col gap-8 w-[100%] my-16">
+    <div className="flex flex-col gap-4 w-[100%]">
       <TypographyH2 className="border-b-0">Projects ✨</TypographyH2>
       <div className="flex flex-col gap-12">
         {project_card_data.data.map((data, index) => {
-          if (index+1 > itemsCount) return;
-          return (
-            <ProjectCard key={index} {...data} />
-          )
+          if (index + 1 > itemsCount) return;
+          return <ProjectCard key={index} {...data} />;
         })}
       </div>
       <div className="w-full mt-4 flex items-center justify-center">
-        <Button size="lg" className="max-w-[280px] w-[100%]" onClick={() => setInitialCount((prev) => prev === project_card_data.data.length ? 3 : project_card_data.data.length)}>{ itemsCount != project_card_data.data.length ? `Show ${project_card_data.data.length - itemsCount} More Items` : "Collapse"}</Button>
+        <Button
+          size="lg"
+          className="max-w-[280px] w-[100%]"
+          onClick={() =>
+            setInitialCount((prev) =>
+              prev === project_card_data.data.length
+                ? 3
+                : project_card_data.data.length,
+            )
+          }
+        >
+          {itemsCount != project_card_data.data.length
+            ? `Show ${project_card_data.data.length - itemsCount} More Items`
+            : "Collapse"}
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+export function ProjectCardSectionExpanded() {
+  return (
+    <div className="flex flex-col gap-4 w-[100%]">
+      <TypographyH2 className="border-b-0">Projects ✨</TypographyH2>
+      <div className="flex flex-col gap-12">
+        {project_card_data.data.map((data, index) => {
+          return <ProjectCard key={index} {...data} />;
+        })}
       </div>
     </div>
   );
