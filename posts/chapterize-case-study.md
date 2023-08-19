@@ -20,6 +20,7 @@ Building chapterize was quite fun and I learnt a lot of things. Here's some of t
 ### 1. Fast API
 
 For this project, my initial plan was to fetch transcripts via the youtube api and then feed it to open ai. The youtube api is quite limited in that it allows very few requests per user. Luckily I found a [python package](https://pypi.org/project/youtube-transcript-api/) that did what I needed. But using it meant I had to use python and setup my own rest api to communicate with my nextjs application, and deploy it too.
+
 ### 2. Open AI and Prompt Engineering
 
 Well, I never used open ai api before (but it was relatively simple to use). Coming up with effective prompts was challenging but fun.
