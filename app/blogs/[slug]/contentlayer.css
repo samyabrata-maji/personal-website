@@ -13,3 +13,21 @@ h3 {
     font-size: x-large;
     font-weight: bolder;
 }
+
+article a {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}

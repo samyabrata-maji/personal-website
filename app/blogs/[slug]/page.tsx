@@ -17,7 +17,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
   return (
-    <article className="mx-auto max-w-xl py-8">
+    <article className="mx-auto max-w-xl py-8 px-8">
       <div className="mb-8 text-center">
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
           {format(parseISO(post.date), "LLLL d, yyyy")}
