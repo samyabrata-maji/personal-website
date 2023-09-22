@@ -8,7 +8,8 @@
     "build": "contentlayer build --clearCache && next build",
     "start": "next start",
     "deploy": "vercel .",
-    "deploy:gh": "tsc && vite build && gh-pages -d build"
+    "deploy:gh": "tsc && vite build && gh-pages -d build",
+    "format": "prettier --write \"{app,components}/**/*.{tsx,ts}\""
   },
   "pnpm": {
     "overrides": {

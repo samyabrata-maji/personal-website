@@ -24,7 +24,10 @@ export function IconButton(props: IconButtonProps) {
   return (
     <a href={href}>
       <Button
-        className={cn("px-2 py-4 max-w-[400px] h-12 w-[calc(100vw-4rem)]", className)}
+        className={cn(
+          "px-2 py-4 max-w-[400px] h-12 w-[calc(100vw-4rem)]",
+          className
+        )}
         {...rest}
       >
         {children}

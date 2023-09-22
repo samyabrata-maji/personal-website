@@ -2,12 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import {
-  TypographyAnchor,
-  TypographyH2,
-  TypographyH3,
-  TypographyP,
-} from "./typography";
+import { TypographyH2, TypographyH3, TypographyP } from "./typography";
 
 import project_card_data from "./data/project-card-data";
 import { Badge } from "./ui/badge";
@@ -94,7 +89,7 @@ export default function ProjectCardSection() {
             setInitialCount((prev) =>
               prev === project_card_data.data.length
                 ? 3
-                : project_card_data.data.length,
+                : project_card_data.data.length
             )
           }
         >

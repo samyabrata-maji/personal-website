@@ -87,12 +87,12 @@
   }
 }
 
-.icon-button > p {
+.icon-.cta-button > p {
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   width: 0px;
 }
 
-.icon-button:hover > p {
+.icon-.cta-button:hover > p {
   width: 100px;
 }
