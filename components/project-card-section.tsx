@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { TypographyH2, TypographyH3, TypographyP } from "./typography";
+import { MdOutlineOpenInNew } from "react-icons/md"
 
 import project_card_data from "./data/project-card-data";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
+import { BiCodeAlt } from "react-icons/bi";
 
 export type Slug = string;
 
@@ -22,7 +24,7 @@ export type ProjectCardProps = {
 export function ProjectCard(props: ProjectCardProps) {
   const { src, url, github_url, title, description, slugs } = props;
   return (
-    <div className="grid grid-cols-[450px_1fr] max-lg:grid-cols-[320px_1fr] max-md:grid-cols-1 max-md:grid-rows-[auto_1fr] gap-8 max-md:gap-4">
+      <div className="grid grid-cols-[450px_1fr] max-lg:grid-cols-[320px_1fr] max-md:grid-cols-1 max-md:grid-rows-[auto_1fr] gap-8 max-md:gap-4">
       <a href={url}>
         <Image
           src={src}
@@ -36,9 +38,9 @@ export function ProjectCard(props: ProjectCardProps) {
         <div className="flex items-center gap-4">
           <TypographyH3 className="mt-0">{title}</TypographyH3>
           <div className="flex flex-wrap gap-2">
-            <a href={url ? url : "#"}>
-              <Button className="h-fit px-2 py-1" disabled={!url}>
-                {url ? "Demo" : "Building"}
+            <a href={url ? url : undefined}>
+              <Button variant={"ghost"} className="h-fit px-2 py-1" disabled={!url}>
+                {url ? <>Demo&nbsp;<MdOutlineOpenInNew/></> : "Building"}
               </Button>
             </a>
             <a href={github_url ? github_url : "#"}>
@@ -47,7 +49,7 @@ export function ProjectCard(props: ProjectCardProps) {
                 variant="ghost"
                 disabled={!github_url}
               >
-                {github_url ? "Code" : "Private"}
+                {github_url ? <>Code&nbsp;<BiCodeAlt/></> : "Private"}
               </Button>
             </a>
           </div>

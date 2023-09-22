@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCardSection from "@/components/project-card-section";
 import Header from "@/components/header";
+import BlogSection from "@/components/blogs-section";
+import EducationSection from "@/components/education-section";
 
 export default function Home() {
   return (
@@ -8,8 +10,8 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between gap-16 max-sm:gap-12 px-36 py-24 max-md:py-16 max-sm:py-8 max-md:px-16 max-sm:px-4">
         <Header />
         <ProjectCardSection />
-        {/* <EducationSection /> */}
-        {/* <BlogSection /> */}
+        <EducationSection />
+        <BlogSection />
       </main>
       <footer className="bg-black gap-16 grid grid-cols-[auto_1fr] h-auto w-full p-16 max-sm:px-4">
         <div className="w-full max-sm:hidden">

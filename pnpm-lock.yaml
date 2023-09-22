@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 overrides:
   '@opentelemetry/api': 1.4.1
   '@opentelemetry/core': 1.13.0
@@ -16,9 +20,6 @@ dependencies:
   '@emotion/react':
     specifier: ^11.10.6
     version: 11.10.6(@types/react@18.2.14)(react@18.2.0)
-  '@gitgraph/react':
-    specifier: ^1.6.0
-    version: 1.6.0(react@18.2.0)
   '@mantine/core':
     specifier: ^6.0.0
     version: 6.0.0(@emotion/react@11.10.6)(@mantine/hooks@6.0.0)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
@@ -64,9 +65,6 @@ dependencies:
   eslint-config-next:
     specifier: 13.4.9
     version: 13.4.9(eslint@8.44.0)(typescript@5.1.6)
-  lucide-react:
-    specifier: ^0.260.0
-    version: 0.260.0(react@18.2.0)
   next:
     specifier: 13.4.9
     version: 13.4.9(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
@@ -721,19 +719,6 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tabbable: 6.2.0
-    dev: false
-
-  /@gitgraph/core@1.5.0:
-    resolution: {integrity: sha512-8CeeHbkKoFHM1y9vfjYiHyEpzl1mEhVrg5c/eFgDBsntOYswoDKU2yOf6DjtVINcE60wmcuynBSJqjMkQo07Ww==}
-    dev: false
-
-  /@gitgraph/react@1.6.0(react@18.2.0):
-    resolution: {integrity: sha512-cLFNZDoEiNbsnMfdT82zeZti5saYghQamfCbTpVvCRr+BrrQ/k94glkZqYPXKKNTEqbQV6L9JeOfAk1hNiFYXA==}
-    peerDependencies:
-      react: '>= 16.8.0'
-    dependencies:
-      '@gitgraph/core': 1.5.0
-      react: 18.2.0
     dev: false
 
   /@grpc/grpc-js@1.8.18:
@@ -3621,14 +3606,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: false
-
-  /lucide-react@0.260.0(react@18.2.0):
-    resolution: {integrity: sha512-xN6wuhUlcXeS4GsxZpd2DZp+m1jEZPckuCr90nQAXKRNl63GZ4KshIcGmqJEUqEygmv8Rf99MhcwF3DqBqQ9Dg==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /markdown-extensions@1.1.1:

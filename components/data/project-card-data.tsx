@@ -26,6 +26,7 @@ const project_card_data: ProjectCardDataProps = {
     {
       title: "Chapterize",
       src: ImgChapterize.src,
+      url: "https://chapterize.vercel.app",
       github_url: "https://github.com/samyabrata-maji/chapterize",
       slugs: ["openai", "fast-api", "nextjs"],
       description:

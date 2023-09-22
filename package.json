@@ -25,7 +25,6 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.6",
-    "@gitgraph/react": "^1.6.0",
     "@mantine/core": "^6.0.0",
     "@mantine/hooks": "^6.0.0",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -41,7 +40,6 @@
     "date-fns": "^2.30.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
-    "lucide-react": "^0.260.0",
     "next": "13.4.9",
     "next-contentlayer": "^0.3.4",
     "postcss": "8.4.25",
