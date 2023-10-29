@@ -1,5 +1,9 @@
 import BlogSection from "@/components/blogs-section";
-import { TypographyH2, TypographyH3, TypographyP } from "@/components/typography";
+import {
+  TypographyH2,
+  TypographyH3,
+  TypographyP,
+} from "@/components/typography";
 import case_study_data from "@/components/data/case-studies";
 import React from "react";
 
@@ -16,8 +20,10 @@ export default function PageBlogs() {
                 <div className="space-y-8">
                   <img src={item.src} />
                   <div className="space-y-2">
-                  <TypographyH3 className="m-0 p-0">{item.title}</TypographyH3>
-                  <TypographyP>{item.description}</TypographyP>
+                    <TypographyH3 className="m-0 p-0">
+                      {item.title}
+                    </TypographyH3>
+                    <TypographyP>{item.description}</TypographyP>
                   </div>
                 </div>
               </a>

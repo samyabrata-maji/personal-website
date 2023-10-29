@@ -1,35 +1,57 @@
-// app/posts/[slug]/page.tsx
 import { format, parseISO } from "date-fns";
+import { TypographyH1, TypographySmall } from "@/components/typography";
+import { Mdx } from "@/components/use-mdx";
 import { allPosts } from "contentlayer/generated";
-import "./contentlayer.css";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-export const generateStaticParams = async () =>
-  allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
-
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
-  return { title: post.title };
+export const generateMetadata = ({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata => {
+  const post = getPostFromParams(params.slug);
+  const basic_details = { title: post.title, description: post.description };
+  return {
+    ...basic_details,
+    authors: { name: "Samyabrata Maji" },
+    category: "case study",
+    keywords: `${post.keywords}, case study`,
+    metadataBase: new URL("https://sammaji.vercel.app"),
+    openGraph: {
+      ...basic_details,
+      type: "article",
+      authors: "Samyabrata Maji",
+    },
+  };
 };
 
-const PostLayout = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
+function getPostFromParams(slug: string) {
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
+  if (!post) notFound();
+  return post;
+}
+
+export default async function PagePost({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = getPostFromParams(params.slug);
+
+  const date = post.edited ? post.edited : post.created;
+  const formated_date = format(parseISO(date), "do MMM yyyy");
+  const date_text = post.edited
+    ? `Last edited: ${formated_date}`
+    : `Created: ${formated_date}`;
 
   return (
-    <article className="mx-auto max-w-xl py-8 px-8">
-      <div className="mb-8 text-center">
-        <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-        <h1>{post.title}</h1>
-      </div>
-      <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
-    </article>
+    <div className="mx-[28%] my-16 flex flex-col gap-8">
+      <TypographySmall className="w-full text-center">
+        {date_text}
+      </TypographySmall>
+      <TypographyH1>{post.title}</TypographyH1>
+      <Mdx code={post.body.code} />
+    </div>
   );
-};
-
-export default PostLayout;
+}

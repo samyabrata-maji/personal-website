@@ -67,10 +67,31 @@ export function TypographyH3(props: TypographyProps) {
   );
 }
 
+export function TypographySmall(props: TypographyProps) {
+  const { className, children, ...rest } = props;
+  return (
+    <small
+      className={cn("text-sm font-medium leading-none", className)}
+      {...rest}
+    >
+      {children}
+    </small>
+  );
+}
+
 export function TypographyP(props: TypographyProps) {
   const { className, children, ...rest } = props;
   return (
     <p className={cn("leading-7", className)} {...rest}>
+      {children}
+    </p>
+  );
+}
+
+export function TypographyMuted(props: TypographyProps) {
+  const { className, children, ...rest } = props;
+  return (
+    <p className={cn("text-sm text-muted-foreground", className)} {...rest}>
       {children}
     </p>
   );
@@ -81,7 +102,7 @@ export function TypographyAnchor(props: TypographyAnchorProps) {
   return (
     <a
       className={cn(
-        "font-medium text-blue-400 hover:underline underline-offset-4",
+        "font-medium hover:underline underline-offset-4",
         className,
       )}
       {...rest}

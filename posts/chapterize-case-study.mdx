@@ -1,17 +1,17 @@
 ---
 title: Chapterize Case Study
-date: 2023-08-19
+description: Chapterize is a simple NextJS website that generates youtube chapters from a youtube video. It uses OpenAI's gpt-3.5-turbo model to analyze the transcripts of the videos and generate chapters based on that.
+keywords: chapterize, gpt3, ai
+created: 2023-08-19
 ---
 
-[Chapterize](https://chapterize.vercel.app/) is a simple NextJS website that generates youtube chapters from a youtube video. It uses OpenAI's *gpt-3.5-turbo* model to analyze the transcripts of the videos and generate chapters based on that.
-
-<!-- > TODO: add gif that shows the working of chapterize -->
+[Chapterize](https://chapterize.vercel.app/) is a simple NextJS website that generates youtube chapters from a youtube video. It uses OpenAI's _gpt-3.5-turbo_ model to analyze the transcripts of the videos and generate chapters based on that.
 
 ## How does it works?
 
 The working is pretty simple. First, it makes an api requests to an endpoint to fetch the transcript in chunks. Its then feed the chunk to open ai and receives a response. That response is then parsed into a format that YouTube recognizes as valid chapters.
 
-<!-- ![Chapterize](/assets/img/chapterize.png) -->
+![Chapterize](/assets/img/chapterize.png)
 
 ## What I learned?
 
@@ -46,5 +46,3 @@ I want to save the response in a firestore database, so that users can access it
 I also want to add a feature where every time a new token is generated, it will update an in-memory cache. That way users can continue from where they left, in case some failure happens while generating.
 
 Currently, its not free, but I'm planning to add a free trial for new users.
-
-**Click this link to [Try Chapterize](https://chapterize.vercel.app/)**
