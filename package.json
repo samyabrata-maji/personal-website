@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "cl": "contentlayer build",
-    "format": "prettier --write \"{app,components}/**/*.{tsx,ts}\" \"posts/*.mdx\"",
+    "format": "prettier --write \"{app,components,lib}/**/*.{tsx,ts}\" \"posts/*.mdx\"",
     "dev:tr": "next dev --turbo",
     "dev:cl": "concurrently \"contentlayer dev --clearCache --verbose\" \"next dev -p 3000\"",
     "build": "contentlayer build --clearCache && next build",

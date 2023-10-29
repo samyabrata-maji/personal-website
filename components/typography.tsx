@@ -42,7 +42,7 @@ export function TypographyH2(props: TypographyProps) {
   return (
     <h2
       className={cn(
-        "mt-10 scroll-m-20 pb-2 text-3xl max-sm:text-xl font-semibold tracking-tight transition-colors first:mt-0",
+        "scroll-m-8 pb-2 text-3xl max-sm:text-xl font-semibold tracking-tight transition-colors first:mt-0",
         className,
       )}
       {...rest}
@@ -57,7 +57,7 @@ export function TypographyH3(props: TypographyProps) {
   return (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-2xl max-sm:text-xl font-semibold tracking-tight",
+        "scroll-m-8 text-2xl max-sm:text-xl font-semibold tracking-tight",
         className,
       )}
       {...rest}

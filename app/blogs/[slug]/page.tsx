@@ -46,12 +46,16 @@ export default async function PagePost({
     : `Created: ${formated_date}`;
 
   return (
-    <div className="mx-[28%] my-16 flex flex-col gap-8">
-      <TypographySmall className="w-full text-center">
-        {date_text}
-      </TypographySmall>
-      <TypographyH1>{post.title}</TypographyH1>
-      <Mdx code={post.body.code} />
+    <div className="my-16 flex flex-col gap-8 items-center justify-center">
+      <div className="flex flex-col gap-8 w-full px-6 lg:mx-0 lg:w-1/2 2xl:w-1/3">
+        <TypographySmall className="mx-auto w-full text-center">
+          {date_text}
+        </TypographySmall>
+        <TypographyH1 className="mx-auto w-full text-center">
+          {post.title}
+        </TypographyH1>
+        <Mdx code={post.body.code} />
+      </div>
     </div>
   );
 }

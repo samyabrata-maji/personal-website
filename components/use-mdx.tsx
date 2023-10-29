@@ -14,8 +14,16 @@ import {
 
 const components = {
   h1: TypographyH1,
-  h2: TypographyH2,
-  h3: TypographyH3,
+  h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <TypographyH2 className="mt-6" {...props}>
+      {children}
+    </TypographyH2>
+  ),
+  h3: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <TypographyH3 className="mt-6" {...props}>
+      {children}
+    </TypographyH3>
+  ),
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4
       className={cn(
@@ -62,7 +70,11 @@ const components = {
     ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
-    <img className={cn("rounded-md border", className)} alt={alt} {...props} />
+    <img
+      className={cn("my-8 rounded-md border", className)}
+      alt={alt}
+      {...props}
+    />
   ),
   //   hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
   //   table: ({ className, ...props }: React.HTMLAttributes<>: React.HTMLAttributes<HTMLTableElement>) => (
