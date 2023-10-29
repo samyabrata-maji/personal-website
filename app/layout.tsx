@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description,
   keywords: ["portfolio", "web developer", "react", "next", "frontend"],
   alternates: { canonical: { url: "https://sammaji.pages.dev/" } },
-  icons: ["https://vercel.pub/favicon.ico"],
+  icons: ["/favicon.ico"],
   openGraph: {
     title,
     description,
