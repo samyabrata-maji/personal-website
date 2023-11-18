@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { fsShader } from "./shaders";
 
 function linkShader(
   program: WebGLProgram,
