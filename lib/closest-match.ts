@@ -5,6 +5,7 @@ const valid_urls = [
   "/blogs",
   "/socials",
   "/projects",
+  "/resume",
   ...case_study_data.map((value) => value.url).filter((value) => value != "/"),
 ];
 
