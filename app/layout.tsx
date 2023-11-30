@@ -1,10 +1,16 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
+import {GeistSans} from 'geist/font/sans'
 import ImgPfp from "@/public/assets/img/sammaji.png";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
-// const syne = Syne({subsets: ['greek']})
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap'
+})
+
+const geist = GeistSans
 
 const title = "Portfolio of Samyabrata Maji";
 const description =
@@ -38,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(geist.className, "antialiased")}>
         <nav className="h-[56px] border-b-[1px] border-[rgba(0,0,0,0.12)] flex items-center justify-end mx-36 max-md:mx-16 max-sm:mx-0 max-sm:px-4">
           <div className="flex gap-2">
             <a className="" href="/blogs">

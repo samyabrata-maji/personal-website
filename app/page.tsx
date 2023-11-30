@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between gap-16 max-sm:gap-12 px-36 py-24 max-md:py-16 max-sm:py-8 max-md:px-16 max-sm:px-4">
       <Header />
       <ProjectCardSection />
-      <EducationSection />
+      {/* <EducationSection /> */}
       <BlogSection />
 
       {/* <div>
