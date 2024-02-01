@@ -1,4 +1,7 @@
-import getHashnodeEntity, { HashnodePost } from "@/lib/hashnode";
+import getHashnodeEntity, {
+  HashnodeEntity,
+  HashnodePost,
+} from "@/lib/hashnode";
 import { TypographyH2, TypographyH3, TypographyP } from "./typography";
 import { AiOutlineEye, AiOutlineLike } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
@@ -50,7 +53,13 @@ export function Article(props: HashnodePost) {
 }
 
 export default async function BlogSection() {
-  const entity = await getHashnodeEntity();
+  let entity: HashnodeEntity | null = null;
+  try {
+    entity = await getHashnodeEntity();
+  } catch {
+    return <></>;
+  }
+
   return (
     <div className="flex flex-col gap-4 w-[100%]">
       <TypographyH2>{`Blogs & Articles (${entity.user.numPosts} posts)`}</TypographyH2>

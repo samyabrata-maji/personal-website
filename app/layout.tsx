@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 
 import ImgPfp from "@/public/assets/img/sammaji.png";
 
@@ -10,17 +10,17 @@ export const satoshi = localFont({
   src: [
     {
       path: "./fonts/Satoshi-Variable.woff2",
-      style: "normal"
+      style: "normal",
     },
     {
       path: "./fonts/Satoshi-VariableItalic.woff2",
-      style: "italic"
-    }
+      style: "italic",
+    },
   ],
   display: "swap",
   preload: true,
-  variable: "--font-satoshi"
-})
+  variable: "--font-satoshi",
+});
 
 const title = "Portfolio of Samyabrata Maji";
 const description =

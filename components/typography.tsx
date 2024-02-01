@@ -88,6 +88,21 @@ export function TypographyP(props: TypographyProps) {
   );
 }
 
+export function P(props: TypographyProps) {
+  const { className, children, ...rest } = props;
+  return (
+    <p
+      className={cn(
+        "text-[18px] text-[rgba(225,225,225,0.75)] leading-[1.6em]",
+        className,
+      )}
+      {...rest}
+    >
+      {children}
+    </p>
+  );
+}
+
 export function TypographyMuted(props: TypographyProps) {
   const { className, children, ...rest } = props;
   return (
@@ -121,5 +136,20 @@ export function TypographyBlockQuote(props: TypographyBlockQuoteProps) {
     >
       {children}
     </blockquote>
+  );
+}
+
+export function Ul(
+  props: React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLUListElement>,
+    HTMLUListElement
+  >,
+) {
+  const { className, children, ...rest } = props;
+
+  return (
+    <ul className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className)} {...rest}>
+      {children}
+    </ul>
   );
 }
