@@ -4,6 +4,9 @@ import { Inter, Syne } from "next/font/google";
 import localFont from "next/font/local";
 
 import ImgPfp from "@/public/assets/img/sammaji.png";
+import { Toaster } from "@/components/ui/sonner";
+import Head from "next/head";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 export const satoshi = localFont({
@@ -71,6 +74,8 @@ export default function RootLayout({
           </div>
         </nav> */}
         {children}
+        <Toaster />
+        <Script src="/scripts/clarity.js" defer />
       </body>
     </html>
   );

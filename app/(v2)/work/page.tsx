@@ -44,7 +44,7 @@ const data: WorkEntity[] = [
     title: "Baires Dev",
     duration: "Dec 23 - Present",
     role: "Full Stack Developer",
-    icon: "/bairesdev.webp",
+    icon: "/bairesdev.png",
     description: (
       <>
         <P>
@@ -101,7 +101,10 @@ export default function Page() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </P>
-            <a href="/hire-me" className="w-fit px-8 py-2 rounded-lg bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 transition duration-200">
+            <a
+              href="/hire-me"
+              className="w-fit px-8 py-2 rounded-lg bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 transition duration-200"
+            >
               Hire me
             </a>
           </div>
@@ -123,7 +126,7 @@ export default function Page() {
               <p className="text-4xl font-semibold tracking-tight flex items-center gap-4">
                 {value.icon && (
                   <span className="h-[48px] bg-white p-2 rounded-lg">
-                    <img className="h-full" src="/bairesdev.webp" />
+                    <img className="h-full" src={value.icon} />
                   </span>
                 )}
                 {value.title}
