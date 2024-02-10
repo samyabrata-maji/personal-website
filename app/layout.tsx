@@ -1,11 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import ImgPfp from "@/public/assets/img/sammaji.png";
-import { Toaster } from "@/components/ui/sonner";
-import Head from "next/head";
+import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -73,8 +72,8 @@ export default function RootLayout({
             </a>
           </div>
         </nav> */}
-        {children}
         <Toaster />
+        {children}
         <Script src="/scripts/clarity.js" defer />
       </body>
     </html>

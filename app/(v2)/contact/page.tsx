@@ -15,40 +15,27 @@ export default function Page() {
     reset,
   } = useForm();
 
-  const onSubmit = useCallback(
-    async (data: FieldValues) => {
-      const body = {
-        records: [
-          {
-            Name: data.name,
-            Email: data.email,
-            Message: data.message
-          }
-        ]
-      }
-      const token = process.env.AIRTABLE_TOKEN
-      if (!token) throw new Error("please add a AIRTABLE_TOKEN in your .env file")
-
-      const endpoint = "http://api.airtable.com/v0/appKPzIG3a7zYukqn/tblfCJUbikTVnopuN/"
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "User-Agent": "PostmanRuntime/7.36.1",
-          "Access-Control-Allow-Origin": "*",
-          "Authorization": `Bearer ${token}`
+  const onSubmit = 
+    (data: FieldValues) => {
+      fetch(
+        "/api/form/send_message",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            message: data.message
+          }),
         },
-        body: JSON.stringify(body)
-      });
-
-      if (!res.ok) {
-        toast({description: "Failed to send message.", variant: "destructive"})
-        throw new Error("failed to send message")
-      }
-      toast({description: "Message sent successfully."})
-      reset();
-    },
-    [reset, toast],
-  );
+      )
+        .then(res => {
+          if (!res.ok) throw new Error("Failed to create entry.")
+          return res.json()
+        })
+        .then(() => toast({description: "Sent successfully!"}))
+        .catch(() => toast({description: "Failed to send!", variant: "destructive"}))
+        .finally(() => reset())
+    }
 
   return (
     <div className="bg-black text-white min-h-screen h-full w-auto p-8 flex items-center justify-center">
