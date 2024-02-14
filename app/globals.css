@@ -12,6 +12,14 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+.bg-white-radial {
+  background: radial-gradient(closest-side, rgba(225,225,225,0.06), rgba(232,232,232, 0.04), rgba(0,0,0,0));
+}
+
+.border-thin {
+  border: 1px solid rgba(225, 225, 225, 0.24);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
