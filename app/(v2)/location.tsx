@@ -49,7 +49,7 @@ const LocationCard = () => {
       glowColor: [0.5, 0.5, 0.5],
       markers: [{ location: [22.3193, 114.1694], size: 0.1 }],
       scale: 1.05,
-      onRender: (state) => {
+      onRender: (state: any) => {
         state.phi = 2.75 + r.get();
         state.width = width * 2;
         state.height = width * 2;

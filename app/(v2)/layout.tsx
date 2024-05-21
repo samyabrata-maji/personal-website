@@ -5,7 +5,6 @@ import Image from "next/image";
 import GlowTop from "@/public/glow-top.svg";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
-import Providers from "@/components/providers";
 import { Toaster } from "@/components/ui/toaster";
 import "@/styles/globals.css";
 
@@ -43,12 +42,9 @@ export default function layout({ children }: { children: React.ReactNode }) {
           haptikBold.variable,
         )}
       >
-        {/* <Providers> */}
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          {/* <LogLib config={{ id: 'forklifter_vercel' }} /> */}
           <Toaster />
           <TailwindIndicator />
-          {/* </Providers> */}
           <main
             className={cn(
               "min-h-screen font-sans antialiased",

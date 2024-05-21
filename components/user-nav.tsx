@@ -28,7 +28,7 @@ export function UserNav({ user }: { user: User }) {
                 user.image ??
                 "https://cdn.vectorstock.com/i/1000x1000/45/79/male-avatar-profile-picture-silhouette-light-vector-4684579.webp"
               }
-              alt={user.username ?? ""}
+              alt={"Sam Maji"}
             />
             <AvatarFallback>{initials}</AvatarFallback>
           </Avatar>
@@ -45,7 +45,7 @@ export function UserNav({ user }: { user: User }) {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild className="cursor-pointer">
-          <Link target="_blank" rel="noreferrer" href={`/${user.username}`}>
+          <Link target="_blank" rel="noreferrer" href={`/old`}>
             <Icons.Flame className="mr-2 h-4 w-4" aria-hidden="true" />
             View Site
             <DropdownMenuShortcut>⇧⌘S</DropdownMenuShortcut>
