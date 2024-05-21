@@ -3,7 +3,7 @@ import {
   makeSource,
   ComputedFields,
 } from "contentlayer/source-files";
-import rehypeAutolinkHeadings, {type Options} from "rehype-autolink-headings";
+import rehypeAutolinkHeadings, { type Options } from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
@@ -11,7 +11,7 @@ const computedFields: ComputedFields = {
   slug: {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath,
-  }
+  },
 };
 
 export const Post = defineDocumentType(() => ({
@@ -29,16 +29,16 @@ export const Post = defineDocumentType(() => ({
     },
     keywords: {
       type: "string",
-      required: true
+      required: true,
     },
     created: {
       type: "date",
       required: true,
     },
     edited: {
-        type: "date",
-        required: false
-    }
+      type: "date",
+      required: false,
+    },
   },
   computedFields,
 }));

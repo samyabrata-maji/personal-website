@@ -39,7 +39,7 @@ type Props = {
     description: string;
     webUrl: string;
     techStack: string[];
-    src: string
+    src: string;
   }[];
 };
 
@@ -97,15 +97,15 @@ export default function FeaturedProjects({ projects }: Props) {
             className="group relative rounded-xl px-2 py-4 shadow-feature-card-dark flex flex-col"
           >
             <div>
-            <BlurImage
-              src={project.src}
-              lazy
-              width={1280}
-              height={832}
-              alt={""}
-              imageClassName="group-hover:scale-150 opacity-80"
-              className="rounded-lg"
-            />
+              <BlurImage
+                src={project.src}
+                lazy
+                width={1280}
+                height={832}
+                alt={""}
+                imageClassName="group-hover:scale-150 opacity-80"
+                className="rounded-lg"
+              />
             </div>
             <div className="px-2 py-4 flex flex-col justify-between gap-3">
               <div className="flex items-center grow">
@@ -115,22 +115,24 @@ export default function FeaturedProjects({ projects }: Props) {
                       {project.name}
                     </h1>
                     <div className="flex items-center">
-                      {project.githubUrl && <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <Link
-                              target="_blank"
-                              className="p-2"
-                              href={project.githubUrl}
-                            >
-                              <Icons.Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-                            </Link>
-                          </TooltipTrigger>
-                          <TooltipContent className="bg-slate-800 text-slate-300">
-                            <p>Source code</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>}
+                      {project.githubUrl && (
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Link
+                                target="_blank"
+                                className="p-2"
+                                href={project.githubUrl}
+                              >
+                                <Icons.Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                              </Link>
+                            </TooltipTrigger>
+                            <TooltipContent className="bg-slate-800 text-slate-300">
+                              <p>Source code</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      )}
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger asChild>
@@ -155,60 +157,61 @@ export default function FeaturedProjects({ projects }: Props) {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                {project.techStack.length > 0 && project.techStack
-                  .sort((a, b) => a.localeCompare(b))
-                  .map((t, index) => {
-                    if (index < 5) {
-                      return (
-                        <div
-                          key={t}
-                          className="group relative grid overflow-hidden rounded-lg px-3 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
-                        >
-                          <span>
-                            <span className="spark mask-gradient animate-flip before:animate-rotate absolute inset-0 h-[100%] w-[100%] overflow-hidden rounded-lg [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
-                          </span>
-                          <span className="backdrop absolute inset-px rounded-full bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900" />
-                          <span className="z-10 text-neutral-400 text-xs font-medium">
-                            {t}
-                          </span>
-                        </div>
-                      );
-                    } else if (index === 5) {
-                      const remaining = project.techStack.length - 5;
-                      return (
-                        <Dialog key={Math.random()}>
-                          <DialogTrigger asChild>
-                            <button className="inline-flex animate-background-shine items-center justify-center rounded-lg text-xs border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] p-1 font-medium text-neutral-400 transition-colors">
-                              + {remaining} more...
-                            </button>
-                          </DialogTrigger>
-                          <DialogContent>
-                            <DialogHeader>
-                              <DialogTitle className="text-lg font-bold">
-                                Tech Stack
-                              </DialogTitle>
-                              <DialogDescription>
-                                All Tech used for {project.name}
-                              </DialogDescription>
-                            </DialogHeader>
-                            <div className="flex flex-wrap gap-2">
-                              {project.techStack.map((t, index) => {
-                                return (
-                                  <p
-                                    key={t}
-                                    className="text-sm font-medium inline-flex animate-background-shine bg-[linear-gradient(110deg,#939393,45%,#1e2631,55%,#939393)] bg-[length:200%_100%] text-transparent bg-clip-text"
-                                  >
-                                    {t}
-                                  </p>
-                                );
-                              })}
-                            </div>
-                          </DialogContent>
-                        </Dialog>
-                      );
-                    }
-                    return null;
-                  })}
+                {project.techStack.length > 0 &&
+                  project.techStack
+                    .sort((a, b) => a.localeCompare(b))
+                    .map((t, index) => {
+                      if (index < 5) {
+                        return (
+                          <div
+                            key={t}
+                            className="group relative grid overflow-hidden rounded-lg px-3 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
+                          >
+                            <span>
+                              <span className="spark mask-gradient animate-flip before:animate-rotate absolute inset-0 h-[100%] w-[100%] overflow-hidden rounded-lg [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
+                            </span>
+                            <span className="backdrop absolute inset-px rounded-full bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900" />
+                            <span className="z-10 text-neutral-400 text-xs font-medium">
+                              {t}
+                            </span>
+                          </div>
+                        );
+                      } else if (index === 5) {
+                        const remaining = project.techStack.length - 5;
+                        return (
+                          <Dialog key={Math.random()}>
+                            <DialogTrigger asChild>
+                              <button className="inline-flex animate-background-shine items-center justify-center rounded-lg text-xs border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] p-1 font-medium text-neutral-400 transition-colors">
+                                + {remaining} more...
+                              </button>
+                            </DialogTrigger>
+                            <DialogContent>
+                              <DialogHeader>
+                                <DialogTitle className="text-lg font-bold">
+                                  Tech Stack
+                                </DialogTitle>
+                                <DialogDescription>
+                                  All Tech used for {project.name}
+                                </DialogDescription>
+                              </DialogHeader>
+                              <div className="flex flex-wrap gap-2">
+                                {project.techStack.map((t, index) => {
+                                  return (
+                                    <p
+                                      key={t}
+                                      className="text-sm font-medium inline-flex animate-background-shine bg-[linear-gradient(110deg,#939393,45%,#1e2631,55%,#939393)] bg-[length:200%_100%] text-transparent bg-clip-text"
+                                    >
+                                      {t}
+                                    </p>
+                                  );
+                                })}
+                              </div>
+                            </DialogContent>
+                          </Dialog>
+                        );
+                      }
+                      return null;
+                    })}
               </div>
             </div>
           </div>

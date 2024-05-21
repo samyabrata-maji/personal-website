@@ -179,9 +179,11 @@ export default function Experiences({ experiences }: Props) {
                     </TooltipProvider>
                   </div>
                 </div>
-                {work.description && <p className="text-muted-foreground text-sm font-medium whitespace-pre-line break-words">
-                  {work.description}
-                </p>}
+                {work.description && (
+                  <p className="text-muted-foreground text-sm font-medium whitespace-pre-line break-words">
+                    {work.description}
+                  </p>
+                )}
               </div>
             </div>
           </div>

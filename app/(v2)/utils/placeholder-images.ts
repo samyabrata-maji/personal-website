@@ -1,7 +1,7 @@
 export const placeholderImgs = [
-  '/images/social-bg-dark-lines.jpg',
+  "/images/social-bg-dark-lines.jpg",
   // '/images/background.png',
-  '/images/social-bg-light-lines.jpg',
+  "/images/social-bg-light-lines.jpg",
   // '/images/space-man.jpeg',
   // '/images/bloglarge.jpg',
   // '/images/bg-1.png',

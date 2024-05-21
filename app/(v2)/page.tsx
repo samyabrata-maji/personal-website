@@ -115,26 +115,30 @@ export default async function Website() {
           projects={[
             {
               name: "Samscript",
-              description: "A dynamically typed programming language made using Typescript and Java. Supports most features of a standard programming language.",
+              description:
+                "A dynamically typed programming language made using Typescript and Java. Supports most features of a standard programming language.",
               githubUrl: "https://github.com/sammaji/samscript-ts",
               techStack: [],
               webUrl: "https://github.com/sammaji/samscript-ts#samscript",
-              src: "/images/samscript.png"
+              src: "/images/samscript.png",
             },
             {
               name: "Toy DNS Server",
-              description: "A simple DNS server built on Typescript. Supports recursive resolve.",
+              description:
+                "A simple DNS server built on Typescript. Supports recursive resolve.",
               githubUrl: "https://github.com/sammaji/toy-dns-server",
               techStack: [],
-              webUrl: "https://github.com/sammaji/toy-dns-server#toy-dns-server",
-              src: "/images/dns-server.png"
+              webUrl:
+                "https://github.com/sammaji/toy-dns-server#toy-dns-server",
+              src: "/images/dns-server.png",
             },
             {
               name: "Gasar Project",
-              description: "Admin and internal dashboards for Genetic Assessment and Surveillance of Antibiotic Resistance Study (GASAR) to collect samples from research institutes.",
+              description:
+                "Admin and internal dashboards for Genetic Assessment and Surveillance of Antibiotic Resistance Study (GASAR) to collect samples from research institutes.",
               techStack: [],
               webUrl: "#",
-              src: "/images/gasar.png"
+              src: "/images/gasar.png",
             },
             {
               name: "Digital Dreamers",
@@ -142,7 +146,7 @@ export default async function Website() {
               githubUrl: "https://github.com/sammaji/digitaldreamers.xyz",
               techStack: [],
               webUrl: "https://digitaldreamers.xyz",
-              src: "/images/digital-dreamers.png"
+              src: "/images/digital-dreamers.png",
             },
           ]}
         />
