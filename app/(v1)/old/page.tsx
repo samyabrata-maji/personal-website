@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <ProjectCardSection />
       <EducationSection />
-      <BlogSection />
+      {/* <BlogSection /> */}
 
       {/* <div>
         <ul className="my-6 ml-6 list-disc [&>li]:mt-2">

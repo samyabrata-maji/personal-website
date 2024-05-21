@@ -35,7 +35,7 @@ export default function PageBlogs() {
         </div>
       </div>
 
-      <BlogSection />
+      {/* <BlogSection /> */}
     </main>
   );
 }
