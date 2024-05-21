@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import { BsGithub } from "react-icons/bs";
 import { Button, ButtonProps } from "./ui/button";
-import "@/app/globals.css";
+import "@/app/(v1)/globals.css";
 import { cn } from "@/lib/utils";
 import { type } from "os";
 

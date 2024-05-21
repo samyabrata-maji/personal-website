@@ -1,16 +1,31 @@
-const {withContentlayer} = require('next-contentlayer')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  devIndicators: {
-    buildActivity: true,
-    buildActivityPosition: "bottom-left",
-  },
   compiler: {
     removeConsole: true,
   },
-  swcMinify: true,
+  experimental: {
+    serverActions: true
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'framerusercontent.com',
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com"
+      }
+    ],
+  },
 };
 
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig;
