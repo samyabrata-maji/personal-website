@@ -1,13 +1,38 @@
-import NotFoundSuggestion from "@/components/not-found-suggestion";
-import {
-    TypographyH1
-} from "@/components/typography";
+"use client";
 
-export default function PageNotFound() {
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Something went wrong",
+};
+
+const NotFound = () => {
     return (
-        <div className="min-h-[calc(100dvh-56px)] h-full px-6 flex flex-col gap-8 items-center justify-center">
-            <TypographyH1>{"( ╥﹏╥) ノシ"}</TypographyH1>
-            <NotFoundSuggestion />
+        <div className="flex flex-col items-center justify-center gap-12 h-screen">
+            <Image
+                width={1512}
+                height={550}
+                className="absolute left-1/2 top-0 -z-10 -translate-x-1/2"
+                src="/images/gradient-background-top.png"
+                alt=""
+                role="presentation"
+                priority
+            />
+            <div className="px-2 py-8 flex flex-col items-center justify-center gap-4">
+                <h1 className="text-2xl font-bold font-title">Page not found!</h1>
+                <p className="text-muted-foreground font-title">
+                    This page does not exist. Maybe you mistyped?
+                </p>
+            </div>
+            <Link href="/" className={cn(buttonVariants(), "font-title")}>
+                Go homepage
+            </Link>
         </div>
     );
-}
+};
+
+export default NotFound;

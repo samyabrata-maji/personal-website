@@ -1,23 +1,10 @@
-// import { prisma } from '@/lib/db';
-import type { Metadata } from "next";
-
+import AboutMe from "@/components/about-me";
+import Experiences from "@/components/experiences";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import FeaturedProjects from "@/components/projects";
 import { siteConfig } from "@/config/site";
-// import { env } from '@/env.mjs';
-import { notFound, redirect } from "next/navigation";
-import AboutMe from "./about-me";
-import Contributions from "./contributions";
-
-// import { absoluteUrl } from '@/lib/utils';
-import Experiences from "./experiences";
-import Footer from "./footer";
-import Header from "./header";
-import Hero from "./hero";
-import FeaturedProjects from "./projects";
-import Testimonials from "./testimonials";
-
-type Props = {
-  params: { username: string };
-};
+import { Separator } from "@radix-ui/react-separator";
 
 // export async function generateMetadata({ params }: Props): Promise<Metadata> {
 //   const username = params.username;
@@ -93,102 +80,102 @@ type Props = {
 // }
 
 export default async function Website() {
-  return (
-    <>
-      <Header
-        experiences={true}
-        contributions={false}
-        testimonials={false}
-        projects={true}
-        name="Sam Maji"
-        github="https://github.com/sammaji"
-        linkedIn="https://linkedin.com/in/samyabrata-maji"
-        twitter="https://twitter.com/sammaji15"
-      />
-      <section className="mx-auto mb-16 max-w-5xl px-5 py-24 sm:px-8 space-y-36">
-        <Hero
-          mail="samyabratamaji334@gmail.com"
-          name="Sam"
-          oneLiner="Full-stack Engineer. Designer. Freelancer."
-        />
-        <FeaturedProjects
-          projects={[
-            {
-              name: "Samscript",
-              description:
-                "A dynamically typed programming language made using Typescript and Java. Supports most features of a standard programming language.",
-              githubUrl: "https://github.com/sammaji/samscript-ts",
-              techStack: [],
-              webUrl: "https://github.com/sammaji/samscript-ts#samscript",
-              src: "/images/samscript.png",
-            },
-            {
-              name: "Toy DNS Server",
-              description:
-                "A simple DNS server built on Typescript. Supports recursive resolve.",
-              githubUrl: "https://github.com/sammaji/toy-dns-server",
-              techStack: [],
-              webUrl:
-                "https://github.com/sammaji/toy-dns-server#toy-dns-server",
-              src: "/images/dns-server.png",
-            },
-            {
-              name: "Gasar Project",
-              description:
-                "Admin and internal dashboards for Genetic Assessment and Surveillance of Antibiotic Resistance Study (GASAR) to collect samples from research institutes.",
-              techStack: [],
-              webUrl: "#",
-              src: "/images/gasar.png",
-            },
-            {
-              name: "Digital Dreamers",
-              description: "Landing page for web design agencies.",
-              githubUrl: "https://github.com/sammaji/digitaldreamers.xyz",
-              techStack: [],
-              webUrl: "https://digitaldreamers.xyz",
-              src: "/images/digital-dreamers.png",
-            },
-          ]}
-        />
-        <Experiences
-          experiences={[
-            {
-              position: "Full-stack engineer",
-              startDate: new Date(),
-              endDate: new Date(),
-              currentlyWorking: false,
-              orgName: "Venus Remedies Ltd. (Contract)",
-              orgUrl: "https://www.bairesdev.com/",
-            },
-            {
-              position: "Technical Writer",
-              startDate: new Date("2023-04-01"),
-              endDate: new Date("2023-11-13"),
-              currentlyWorking: false,
-              orgName: "BairesDev (Contract)",
-              orgUrl: "https://www.bairesdev.com/",
-            },
-          ]}
-        />
-        <AboutMe
-          bio="lorem ipsum"
-          techStack={[
-            "NextJS",
-            "React",
-            "TypeScript",
-            "AWS",
-            "Prisma",
-            "PostgreSQL",
-            "MongoDB",
-            "TailwindCSS",
-            "Docker",
-            "NodeJS",
-          ]}
-          twitter="https://twitter.com/sammaji15"
-          linkedin="https://linkedin.com/in/samyabrata-maji"
-          github="https://github.com/sammaji"
-        />
-        {/*
+    return (
+        <>
+            <Header
+                experiences={true}
+                contributions={false}
+                testimonials={false}
+                projects={true}
+                name="Sam Maji"
+                github="https://github.com/sammaji"
+                linkedIn="https://linkedin.com/in/samyabrata-maji"
+                twitter="https://twitter.com/sammaji15"
+            />
+            <section className="mx-auto mb-16 max-w-5xl px-5 py-24 sm:px-8 space-y-36">
+                <Hero
+                    mail="samyabratamaji334@gmail.com"
+                    name="Sam"
+                    oneLiner="Full-stack Engineer. Designer. Freelancer."
+                />
+                <FeaturedProjects
+                    projects={[
+                        {
+                            name: "Samscript",
+                            description:
+                                "A dynamically typed programming language made using Typescript and Java. Supports most features of a standard programming language.",
+                            githubUrl: "https://github.com/sammaji/samscript-ts",
+                            techStack: [],
+                            webUrl: "https://github.com/sammaji/samscript-ts#samscript",
+                            src: "/images/samscript.png",
+                        },
+                        {
+                            name: "Toy DNS Server",
+                            description:
+                                "A simple DNS server built on Typescript. Supports recursive resolve.",
+                            githubUrl: "https://github.com/sammaji/toy-dns-server",
+                            techStack: [],
+                            webUrl:
+                                "https://github.com/sammaji/toy-dns-server#toy-dns-server",
+                            src: "/images/dns-server.png",
+                        },
+                        {
+                            name: "Gasar Project",
+                            description:
+                                "Admin and internal dashboards for Genetic Assessment and Surveillance of Antibiotic Resistance Study (GASAR) to collect samples from research institutes.",
+                            techStack: [],
+                            webUrl: "#",
+                            src: "/images/gasar.png",
+                        },
+                        {
+                            name: "Digital Dreamers",
+                            description: "Landing page for web design agencies.",
+                            githubUrl: "https://github.com/sammaji/digitaldreamers.xyz",
+                            techStack: [],
+                            webUrl: "https://digitaldreamers.xyz",
+                            src: "/images/digital-dreamers.png",
+                        },
+                    ]}
+                />
+                <Experiences
+                    experiences={[
+                        {
+                            position: "Full-stack engineer",
+                            startDate: new Date(),
+                            endDate: new Date(),
+                            currentlyWorking: false,
+                            orgName: "Venus Remedies Ltd. (Contract)",
+                            orgUrl: "https://www.bairesdev.com/",
+                        },
+                        {
+                            position: "Technical Writer",
+                            startDate: new Date("2023-04-01"),
+                            endDate: new Date("2023-11-13"),
+                            currentlyWorking: false,
+                            orgName: "BairesDev (Contract)",
+                            orgUrl: "https://www.bairesdev.com/",
+                        },
+                    ]}
+                />
+                <AboutMe
+                    bio="lorem ipsum"
+                    techStack={[
+                        "NextJS",
+                        "React",
+                        "TypeScript",
+                        "AWS",
+                        "Prisma",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "TailwindCSS",
+                        "Docker",
+                        "NodeJS",
+                    ]}
+                    twitter="https://twitter.com/sammaji15"
+                    linkedin="https://linkedin.com/in/samyabrata-maji"
+                    github="https://github.com/sammaji"
+                />
+                {/*
         {user.projects && user.projects.length > 0 && (
           <FeaturedProjects projects={user.projects} />
         )}
@@ -207,24 +194,16 @@ export default async function Website() {
             github={user.githubUrl}
           />
         )} */}
-        {/* <Footer /> */}
-      </section>
-      {/* <footer className="relative flex flex-col justify-center items-center">
-        <Separator className="w-1/5 bg-cyan-900" />
-        <div className="flex justify-center items-center py-8 text-sm text-gray-400 font-title">
-          <p>
-            &copy; {siteConfig.name}, {new Date().getFullYear()}. Built in the
-            open by
-          </p>
-          <Link
-            target="_blank"
-            href={siteConfig.links.twitter}
-            className="text-blue-500 hover:underline"
-          >
-            <p className="ml-1">Yash</p>
-          </Link>
-        </div>
-      </footer> */}
-    </>
-  );
+                {/* <Footer /> */}
+            </section>
+            <footer className="relative flex flex-col justify-center items-center">
+                <Separator className="w-1/5 bg-cyan-900" />
+                <div className="flex justify-center items-center py-8 text-sm text-gray-400 font-title">
+                    <p>
+                        &copy; {siteConfig.name}, {new Date().getFullYear()}.
+                    </p>
+                </div>
+            </footer>
+        </>
+    );
 }
