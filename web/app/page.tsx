@@ -3,96 +3,58 @@ import Experiences from "@/components/experiences";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import FeaturedProjects from "@/components/projects";
-import { siteConfig } from "@/config/site";
 import { Separator } from "@radix-ui/react-separator";
 import type { Metadata } from "next";
+import ogImg from "@/public/assets/img/sammaji.webp"
 
-const title = "Sam Maji | Full-stack dev | Designer"
-const description = "Full-stack engineer, based in India."
+const title = "Sam Maji | Full-stack dev | Designer";
+const description = "Full-stack engineer, based in India.";
 
 export const metadata: Metadata = {
     title,
     description,
-    metadataBase: new URL(process.env.NEXT_PUBLIC_ROOT_URL ?? "https://sammaji.vercel.app"),
+    metadataBase: new URL(
+        process.env.NEXT_PUBLIC_ROOT_URL ?? "https://sammaji.vercel.app",
+    ),
+    keywords: [
+        "Samyabrata Maji",
+        "Website",
+        "Developer",
+        "Full-stack Engineer",
+        "Software Developer",
+    ],
     openGraph: {
         title,
         description,
+        type: "website",
+        images: [
+            {
+                url: ogImg.src,
+                width: 612,
+                height: 612,
+                alt: `Samyabrata Maji | Full-stack dev`,
+            },
+        ],
+
     },
-    keywords: ["portfolio", "next.js", "full-stack dev", "t3", "prisma", "tailwind", "backend dev"]
-}
-
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const username = params.username;
-
-//   const url = absoluteUrl('/');
-//   const ogUrl = new URL(`${url}/api/og`);
-//   ogUrl.searchParams.set('username', username);
-
-//   const user = await prisma.user.findUnique({
-//     where: { username },
-//     select: {
-//       name: true,
-//       bio: true,
-//     },
-//   });
-
-//   if (!user) {
-//     return {
-//       title: 'Error',
-//       description: 'User not found',
-//     };
-//   }
-
-//   return {
-//     title: {
-//       absolute: `
-//       ${user.name} • ${siteConfig.name}`,
-//     },
-//     description: `${user.bio}`,
-//     metadataBase: new URL(
-//       env.NODE_ENV === 'development'
-//         ? `http://localhost:3000/${username}`
-//         : `https://${siteConfig.url}${username}`
-//     ),
-//     openGraph: {
-//       title: `${user.name} • ${siteConfig.name}`,
-//       description: `${user.bio}`,
-//       type: 'website',
-//       images: [
-//         {
-//           url: ogUrl.toString(),
-//           width: 1200,
-//           height: 630,
-//           alt: `${user.name} • ${siteConfig.name}`,
-//         },
-//       ],
-//     },
-//     twitter: {
-//       title: `${user.name} • ${siteConfig.name}`,
-//       description: `${user.bio}`,
-//       card: 'summary_large_image',
-//       images: [ogUrl.toString()],
-//     },
-//     robots: {
-//       index: true,
-//       follow: true,
-//       googleBot: {
-//         index: true,
-//         follow: true,
-//         'max-video-preview': -1,
-//         'max-image-preview': 'large',
-//         'max-snippet': -1,
-//       },
-//     },
-//     keywords: [
-//       `${user.name}`,
-//       `${user.bio}`,
-//       'Website',
-//       `${siteConfig.name}`,
-//       'Developer',
-//     ],
-//   };
-// }
+    twitter: {
+        title,
+        description,
+        card: 'summary_large_image',
+        images: ogImg.src,
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+};
 
 export default async function Website() {
     return (
@@ -122,7 +84,7 @@ export default async function Website() {
                             githubUrl: "https://github.com/sammaji/samscript-ts",
                             techStack: [],
                             webUrl: "https://github.com/sammaji/samscript-ts#samscript",
-                            src: "/images/samscript.png",
+                            src: "/images/samscript.webp",
                         },
                         {
                             name: "Toy DNS Server",
@@ -132,7 +94,7 @@ export default async function Website() {
                             techStack: [],
                             webUrl:
                                 "https://github.com/sammaji/toy-dns-server#toy-dns-server",
-                            src: "/images/dns-server.png",
+                            src: "/images/dns-server.webp",
                         },
                         {
                             name: "Gasar Project",
@@ -140,7 +102,7 @@ export default async function Website() {
                                 "Admin and internal dashboards for Genetic Assessment and Surveillance of Antibiotic Resistance Study (GASAR) to collect samples from research institutes.",
                             techStack: [],
                             webUrl: "#",
-                            src: "/images/gasar.png",
+                            src: "/images/gasar.webp",
                         },
                         {
                             name: "Digital Dreamers",
@@ -148,7 +110,7 @@ export default async function Website() {
                             githubUrl: "https://github.com/sammaji/digitaldreamers.xyz",
                             techStack: [],
                             webUrl: "https://digitaldreamers.xyz",
-                            src: "/images/digital-dreamers.png",
+                            src: "/images/digital-dreamers.webp",
                         },
                     ]}
                 />
@@ -173,7 +135,7 @@ export default async function Website() {
                     ]}
                 />
                 <AboutMe
-                    bio="lorem ipsum"
+                    bio="I write code."
                     techStack={[
                         "NextJS",
                         "React",
@@ -215,7 +177,7 @@ export default async function Website() {
                 <Separator className="w-1/5 bg-cyan-900" />
                 <div className="flex justify-center items-center py-8 text-sm text-gray-400 font-title">
                     <p>
-                        &copy; {siteConfig.name}, {new Date().getFullYear()}.
+                        &copy; {"Samyabrata Maji"}, {new Date().getFullYear()}.
                     </p>
                 </div>
             </footer>

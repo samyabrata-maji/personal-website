@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/command";
 import * as Icons from "@/components/ui/icons";
 import { Separator } from "@/components/ui/separator";
-import { siteConfig } from "@/config/site";
 import React from "react";
 import { toast } from "sonner";
 import { useCopyToClipboard } from "@/components/utils/use-clipboard";
@@ -143,7 +142,7 @@ export default function CommandMenu({
                     <Separator />
                     <CommandGroup
                         className="flex justify-center items-center"
-                        heading={`${siteConfig.name}, ${new Date().getUTCFullYear()}`}
+                        heading={`Samyabrata Maji, ${new Date().getUTCFullYear()}`}
                     />
                 </CommandList>
             </CommandDialog>

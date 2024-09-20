@@ -9,6 +9,8 @@ import { usePathname } from "next/navigation";
 import * as React from "react";
 import CommandMenu from "../components/command-menu";
 import { HEADER_LINKS } from "./lib/links";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import pfpImg from "@/public/assets/img/pfp.webp"
 
 type NavProps = {
     experiences: boolean | undefined;
@@ -70,9 +72,10 @@ const Header = ({
         >
             <Link href={"#"} className="flex items-center justify-center gap-1">
                 <span className="sr-only">Homepage</span>
-                <h1 className="text-2xl font-serif font-semibold bg-gradient-to-b from-zinc-200 to-zinc-950 bg-clip-text text-transparent">
-                    {name ? getInitials(name) : "❖"}
-                </h1>
+                <Avatar>
+                    <AvatarImage src={pfpImg.src} alt="@sammaji" />
+                    <AvatarFallback>SM</AvatarFallback>
+                </Avatar>
             </Link>
             <div className="flex items-center gap-2">
                 <nav>

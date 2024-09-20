@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/drawer";
 import * as Icons from "@/components/ui/icons";
 import { Separator } from "@/components/ui/separator";
-import { siteConfig } from "@/config/site";
 import { stackl } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { motion, useInView } from "framer-motion";
@@ -132,7 +131,7 @@ const AboutMe = ({ bio, twitter, linkedin, github, techStack }: Props) => {
                             })}
                         </div>
                         <footer className="bottom-0 font-title text-xs text-slate-400">
-                            &copy; {siteConfig.name}, {new Date().getUTCFullYear()}
+                            &copy; {"Samyabrata Maji"}, {new Date().getUTCFullYear()}
                         </footer>
                     </DrawerContent>
                 </Drawer>
