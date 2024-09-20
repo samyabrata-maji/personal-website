@@ -22,7 +22,7 @@ const Error = ({ error }: { readonly error: Error }) => {
                 role="presentation"
                 priority
             />
-            <div className="px-2 py-8 flex flex-col items-center justify-center gap-4">
+            <div className="px-6 py-8 flex flex-col items-center justify-center gap-4">
                 <h1 className="text-2xl font-bold font-title">Something went wrong!</h1>
                 {process.env.NODE_ENV === "development" && (
                     <p className="break-words p-4 text-sm font-title text-center">

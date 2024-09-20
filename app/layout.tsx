@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Image from "next/image";
 import GlowTop from "@/public/glow-top.svg";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import "@/styles/globals.css";
@@ -44,7 +43,6 @@ export default function layout({ children }: { children: React.ReactNode }) {
             >
                 <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
                     <Toaster />
-                    <TailwindIndicator />
                     <main
                         className={cn(
                             "min-h-screen font-sans antialiased",

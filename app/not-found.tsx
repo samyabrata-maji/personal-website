@@ -22,9 +22,9 @@ const NotFound = () => {
                 role="presentation"
                 priority
             />
-            <div className="px-2 py-8 flex flex-col items-center justify-center gap-4">
-                <h1 className="text-2xl font-bold font-title">Page not found!</h1>
-                <p className="text-muted-foreground font-title">
+            <div className="px-6 py-8 flex flex-col items-center justify-center gap-4">
+                <h1 className="text-2xl font-bold font-title text-center">Page not found!</h1>
+                <p className="text-muted-foreground font-title text-center">
                     This page does not exist. Maybe you mistyped?
                 </p>
             </div>

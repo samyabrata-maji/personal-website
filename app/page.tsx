@@ -5,6 +5,21 @@ import Hero from "@/components/hero";
 import FeaturedProjects from "@/components/projects";
 import { siteConfig } from "@/config/site";
 import { Separator } from "@radix-ui/react-separator";
+import type { Metadata } from "next";
+
+const title = "Sam Maji | Full-stack dev | Designer"
+const description = "Full-stack engineer, based in India. Working with Next.js"
+
+export const metadata: Metadata = {
+    title,
+    description,
+    metadataBase: new URL(process.env.NEXT_PUBLIC_ROOT_URL ?? "https://sammaji.vercel.app"),
+    openGraph: {
+        title,
+        description,
+    },
+    keywords: ["portfolio", "next.js", "full-stack dev", "t3", "prisma", "tailwind", "backend dev"]
+}
 
 // export async function generateMetadata({ params }: Props): Promise<Metadata> {
 //   const username = params.username;
