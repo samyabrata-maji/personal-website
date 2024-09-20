@@ -1,5 +1,5 @@
 import { components } from "@/components/markdown";
-import { client } from "@/sanity/lib/client"
+import { client } from "@/lib/sanity"
 import { PortableText } from "@portabletext/react"
 
 const getPost = async (slug: string) => {

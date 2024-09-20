@@ -8,7 +8,7 @@ import { Separator } from "@radix-ui/react-separator";
 import type { Metadata } from "next";
 
 const title = "Sam Maji | Full-stack dev | Designer"
-const description = "Full-stack engineer, based in India. Working with Next.js"
+const description = "Full-stack engineer, based in India."
 
 export const metadata: Metadata = {
     title,
