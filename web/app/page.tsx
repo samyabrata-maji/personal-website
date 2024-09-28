@@ -152,32 +152,13 @@ export default async function Website() {
                     linkedin="https://linkedin.com/in/samyabrata-maji"
                     github="https://github.com/sammaji"
                 />
-                {/*
-        {user.projects && user.projects.length > 0 && (
-          <FeaturedProjects projects={user.projects} />
-        )}
-        {user.contributions && user.contributions.length > 0 && (
-          <Contributions contributions={user.contributions} />
-        )}
-        {user.testimonials && user.testimonials.length > 0 && (
-          <Testimonials testimonials={user.testimonials} />
-        )}
-        {user.bio && user.twitterUrl && user.githubUrl && user.linkedinUrl && (
-          <AboutMe
-            bio={user.bio}
-            techStack={user.techStack}
-            twitter={user.twitterUrl}
-            linkedin={user.linkedinUrl}
-            github={user.githubUrl}
-          />
-        )} */}
-                {/* <Footer /> */}
             </section>
             <footer className="relative flex flex-col justify-center items-center">
                 <Separator className="w-1/5 bg-cyan-900" />
                 <div className="flex justify-center items-center py-8 text-sm text-gray-400 font-title">
+                    <p>Built by me, ofc&ensp;</p>
                     <p>
-                        &copy; {"Samyabrata Maji"}, {new Date().getFullYear()}.
+                        &copy; <a href="https://x.com/sammaji15">Samyabrata Maji</a>, {new Date().getFullYear()}.
                     </p>
                 </div>
             </footer>
