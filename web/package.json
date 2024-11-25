@@ -9,7 +9,7 @@
         "fmt": "prettier --write \"**/*.{tsx,ts}\""
     },
     "dependencies": {
-        "@icons-pack/react-simple-icons": "^10.0.0",
+        "@icons-pack/react-simple-icons": "^10.2.0",
         "@portabletext/react": "^3.1.0",
         "@radix-ui/react-aspect-ratio": "^1.1.0",
         "@radix-ui/react-avatar": "^1.1.0",
@@ -23,6 +23,7 @@
         "@radix-ui/react-slot": "^1.1.0",
         "@radix-ui/react-switch": "^1.1.0",
         "@radix-ui/react-tooltip": "^1.1.2",
+        "@react-icons/all-files": "^4.1.0",
         "@sanity/image-url": "1",
         "@types/node": "22.5.0",
         "@types/react": "18.3.4",
@@ -59,6 +60,7 @@
         "zod": "^3.23.8"
     },
     "devDependencies": {
+        "@next/bundle-analyzer": "^15.0.3",
         "@types/react-syntax-highlighter": "^15.5.13"
     }
 }
